@@ -1,37 +1,50 @@
 [
   {
-    "title": "Nova sezona uskoro počinje",
-    "date": "2026-09-02",
-    "tag": "Najnovije",
-    "summary": "Pripremamo raspored treninga, utakmica i klupskih aktivnosti za novu sezonu.",
-    "url": "rezultati.html",
-    "image": "assets/images/TOP SLIKA.jpg",
-    "alt": "KK Dugopolje klupski trenutak",
+    "title": "Službena web stranica",
+    "slug": "sluzbena-web-stranica",
+    "date": "2026-09-18",
+    "tag": "Klub",
+    "subtitle": "Dobrodošli na službenu web stranicu Košarkaškog kluba Dugopolje.",
+    "summary": "Na jednom mjestu pratite novosti, rezultate, raspored utakmica, upise i klupske aktivnosti KK Dugopolje.",
+    "content": "Dobrodošli na službenu web stranicu Košarkaškog kluba Dugopolje, mjesto na kojem ćemo na jednom mjestu objavljivati sve važne informacije vezane uz rad i djelovanje našeg kluba.\n\nNa stranici možete pronaći informacije o klubu, treninzima i upisima novih članova, rasporedu utakmica, rezultatima i natjecanjima naših selekcija. Poseban naglasak stavljen je na naše najmlađe košarkaše, njihov razvoj, trud i rezultate koje ostvaruju kroz sezonu.\n\nCilj nam je omogućiti djeci, roditeljima, trenerima, ali i svim ljubiteljima košarke jednostavan i brz pristup aktualnim informacijama. Rezultati utakmica i najvažnije novosti bit će redovito dostupni kako bi se uspjesi i rad naših selekcija mogli pratiti na jednom mjestu.\n\nVjerujemo da će ova stranica dodatno povezati naše članove, roditelje i prijatelje kluba te omogućiti bolji uvid u svakodnevni rad i život Košarkaškog kluba Dugopolje.\n\nHvala vam što pratite naš rad i što ste dio naše košarkaške priče.",
+    "image": "assets/images/sluzbena-web-stranica.png",
+    "alt": "Službena web stranica KK Dugopolje",
     "featured": true
   },
   {
+    "title": "Nova sezona uskoro počinje",
+    "slug": "nova-sezona-uskoro-pocinje",
+    "date": "2026-09-02",
+    "tag": "Najnovije",
+    "subtitle": "Klub priprema raspored treninga, utakmica i aktivnosti za novu sezonu.",
+    "summary": "Pripremamo raspored treninga, utakmica i klupskih aktivnosti za novu sezonu.",
+    "content": "KK Dugopolje ulazi u pripremu nove sezone s naglaskom na redovan rad, dobru organizaciju treninga i nastavak razvoja svih dobnih kategorija.\n\nRaspored treninga i utakmica bit će objavljen čim termini budu potvrđeni. Roditelji, članovi i prijatelji kluba sve će važne informacije moći pratiti kroz novosti na stranici.",
+    "image": "assets/images/TOP SLIKA.jpg",
+    "alt": "KK Dugopolje klupski trenutak",
+    "featured": false
+  },
+  {
     "title": "Upisi za mlađe kategorije",
+    "slug": "upisi-za-mlade-kategorije",
     "date": "2026-09-02",
     "tag": "Upisi",
+    "subtitle": "Uskoro objavljujemo termine i osnovne informacije za nove članove.",
     "summary": "Uskoro objavljujemo termine i osnovne informacije za nove članove.",
-    "url": "upisi.html",
+    "content": "Upisi za mlađe kategorije namijenjeni su djeci koja žele napraviti prve košarkaške korake, upoznati klub i postati dio ekipe.\n\nDetalji o terminima, dobnim skupinama i načinu prijave bit će objavljeni na stranici. Za sva pitanja roditelji se mogu javiti klubu putem kontakt podataka.",
+    "image": "assets/images/U13M upisi.jpeg",
+    "alt": "Mlađe kategorije KK Dugopolje",
     "featured": false
   },
   {
     "title": "Raspored pripremnih utakmica",
+    "slug": "raspored-pripremnih-utakmica",
     "date": "2026-09-02",
     "tag": "Utakmice",
+    "subtitle": "Kalendar utakmica bit će dopunjen čim termini budu potvrđeni.",
     "summary": "Kalendar utakmica bit će dopunjen čim termini budu potvrđeni.",
-    "url": "rezultati.html",
+    "content": "Raspored pripremnih utakmica objavit ćemo nakon potvrde termina i protivnika za pojedine kategorije.\n\nNa stranici rezultata bit će dostupni najvažniji podaci o utakmicama, kategorijama, domaćinima i gostima, a novosti će pratiti najave i klupske informacije vezane uz natjecanja.",
+    "image": "assets/images/JUNIOR NBA.jpg",
+    "alt": "Utakmica KK Dugopolje",
     "featured": false
-  },
-  {
-    "title": "Službena web stranica",
-    "date": "2026-09-18",
-    "tag": "sluzbena-web-stranica",
-    "summary": "Dobrodošli na službenu web stranicu Košarkaškog kluba Dugopolje\n\nPred vama je službena web stranica Košarkaškog kluba Dugopolje, mjesto na kojem ćemo na jednom mjestu objavljivati sve važne informacije vezane uz rad i djelovanje našeg kluba.\n\nNa stranici možete pronaći informacije o klubu, treninzima i upisima novih članova, rasporedu utakmica, rezultatima i natjecanjima naših selekcija. Poseban naglasak stavljen je na naše najmlađe košarkaše, njihov razvoj, trud i rezultate koje ostvaruju kroz sezonu.\n\nCilj nam je omogućiti djeci, roditeljima, trenerima, ali i svim ljubiteljima košarke jednostavan i brz pristup aktualnim informacijama. Rezultati utakmica i najvažnije novosti bit će redovito dostupni kako bi se uspjesi i rad naših selekcija mogli pratiti na jednom mjestu.\n\nVjerujemo da će ova stranica dodatno povezati naše članove, roditelje i prijatelje kluba te omogućiti bolji uvid u svakodnevni rad i život Košarkaškog kluba Dugopolje.\n\nHvala vam što pratite naš rad i što ste dio naše košarkaške priče.",
-    "url": "index.html",
-    "image": "assets/images/sluzbena-web-stranica.png",
-    "featured": true
   }
 ]

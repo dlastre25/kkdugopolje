@@ -33,6 +33,10 @@ content:
             label: Naslov
             type: string
             required: true
+          - name: slug
+            label: URL oznaka
+            type: string
+            description: "Kratka oznaka bez razmaka, npr. sluzbena-web-stranica. Ako ostane prazno, stranica će koristiti naslov."
           - name: date
             label: Datum objave
             type: date
@@ -41,15 +45,25 @@ content:
             label: Oznaka
             type: string
             required: true
-          - name: summary
-            label: Kratki tekst
+          - name: subtitle
+            label: Podnaslov
             type: text
             required: true
-          - name: url
-            label: Link
-            type: string
+          - name: summary
+            label: Kratki tekst za karticu
+            type: text
             required: true
-            description: "Primjer: upisi.html, rezultati.html, galerija.html"
+            description: "Prikazuje se na naslovnici ispod naslova. Neka bude 1-2 rečenice."
+          - name: content
+            label: Puni tekst članka
+            type: text
+            required: true
+            description: "Ovo se prikazuje na stranici članka. Za novi odlomak ostavite prazan red."
+          - name: url
+            label: Stari ručni link
+            type: string
+            required: false
+            description: "Više nije potrebno za novosti. Kartica se automatski otvara kao novost.html?slug=..."
           - name: image
             label: Slika
             type: image

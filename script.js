@@ -102,6 +102,31 @@
 
     const normalizePath = (value) => String(value ?? "").trim().replace(/^\/+/, "");
 
+    const slugify = (value) => String(value ?? "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+
+    const articleUrl = (item) => {
+      const slug = slugify(item.slug || item.title);
+      return slug ? `novost.html?slug=${encodeURIComponent(slug)}` : normalizePath(item.url || "index.html");
+    };
+
+    const sortedNews = (items) => [...items].sort((a, b) => {
+      const byDate = String(b.date || "").localeCompare(String(a.date || ""));
+      if (byDate) return byDate;
+      return String(a.title || "").localeCompare(String(b.title || ""));
+    });
+
+    const paragraphsHtml = (value) => String(value ?? "")
+      .split(/\n{2,}/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean)
+      .map((paragraph) => `<p>${escapeHtml(paragraph).replace(/\n/g, "<br>")}</p>`)
+      .join("");
+
     const formatDate = (value) => {
       const date = new Date(`${value}T00:00:00`);
       if (Number.isNaN(date.getTime())) return escapeHtml(value);
@@ -127,7 +152,7 @@
     fetchJson("data/news.json").then((items) => {
       const list = document.querySelector("[data-news-list]");
       if (!list || !Array.isArray(items) || !items.length) return;
-      list.innerHTML = items.map((item, index) => {
+      list.innerHTML = sortedNews(items).map((item, index) => {
         const isFeatured = item.featured || index === 0;
         const image = normalizePath(item.image);
         const cardClass = isFeatured ? "news-card news-card--featured reveal is-visible" : "news-card reveal is-visible";
@@ -141,10 +166,61 @@
             <time datetime="${escapeHtml(item.date)}">${formatDate(item.date)}</time>
             <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.summary)}</p>
+            <span class="news-card__more">Pročitaj više</span>
           </div>
         `;
-        return `<article class="${cardClass}"><a href="${escapeHtml(normalizePath(item.url) || "index.html")}" aria-label="Pročitaj novost: ${escapeHtml(item.title)}">${content}</a></article>`;
+        return `<article class="${cardClass}"><a href="${escapeHtml(articleUrl(item))}" aria-label="Pročitaj novost: ${escapeHtml(item.title)}">${content}</a></article>`;
       }).join("");
+    }).catch(() => {});
+
+    fetchJson("data/news.json").then((items) => {
+      const article = document.querySelector("[data-news-article]");
+      if (!article || !Array.isArray(items) || !items.length) return;
+
+      const params = new URLSearchParams(window.location.search);
+      const requestedSlug = slugify(params.get("slug"));
+      const allNews = sortedNews(items);
+      const item = allNews.find((entry) => slugify(entry.slug || entry.title) === requestedSlug) || allNews[0];
+      const image = normalizePath(item.image) || "assets/images/TOP SLIKA.jpg";
+      const title = item.title || "Novost";
+      const subtitle = item.subtitle || item.summary || "";
+      const body = item.content || item.body || item.text || item.summary || "";
+
+      document.title = `${title} | KK Dugopolje`;
+      document.querySelector('meta[name="description"]')?.setAttribute("content", subtitle);
+
+      article.innerHTML = `
+        <section class="article-hero" aria-labelledby="article-title">
+          <img src="${escapeHtml(image)}" alt="${escapeHtml(item.alt || title)}">
+          <div class="article-hero__overlay"></div>
+          <div class="container article-hero__content reveal is-visible">
+            <a class="text-link article-back" href="index.html#news-title">Nazad na novosti</a>
+            <span class="tag">${escapeHtml(item.tag || "Novost")}</span>
+            <time datetime="${escapeHtml(item.date || "")}">${formatDate(item.date)}</time>
+            <h1 id="article-title">${escapeHtml(title)}</h1>
+            <p>${escapeHtml(subtitle)}</p>
+          </div>
+        </section>
+        <section class="section article-section">
+          <div class="container article-layout">
+            <div class="article-body">
+              ${paragraphsHtml(body)}
+            </div>
+            <aside class="article-aside" aria-labelledby="more-news-title">
+              <h2 id="more-news-title">Još novosti</h2>
+              <div class="article-more">
+                ${allNews.filter((entry) => entry !== item).slice(0, 3).map((entry) => `
+                  <a href="${escapeHtml(articleUrl(entry))}">
+                    <span class="tag">${escapeHtml(entry.tag || "Novost")}</span>
+                    <strong>${escapeHtml(entry.title)}</strong>
+                    <time datetime="${escapeHtml(entry.date || "")}">${formatDate(entry.date)}</time>
+                  </a>
+                `).join("")}
+              </div>
+            </aside>
+          </div>
+        </section>
+      `;
     }).catch(() => {});
 
     fetchJson("data/results.json").then((items) => {
