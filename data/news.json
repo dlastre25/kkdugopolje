@@ -15,8 +15,6 @@
     "tag": "Upisi",
     "summary": "Uskoro objavljujemo termine i osnovne informacije za nove članove.",
     "url": "upisi.html",
-    "image": "",
-    "alt": "",
     "featured": false
   },
   {
@@ -25,8 +23,6 @@
     "tag": "Utakmice",
     "summary": "Kalendar utakmica bit će dopunjen čim termini budu potvrđeni.",
     "url": "rezultati.html",
-    "image": "",
-    "alt": "",
     "featured": false
   },
   {
@@ -35,8 +31,15 @@
     "tag": "Klub",
     "summary": "Novosti iz dvorane i galerija trenutaka bit će dostupne na naslovnici.",
     "url": "galerija.html",
-    "image": "",
-    "alt": "",
     "featured": false
+  },
+  {
+    "title": "Službena web stranica",
+    "date": "2026-09-18",
+    "tag": "sluzbena-web-stranica",
+    "summary": "Dobrodošli na službenu web stranicu Košarkaškog kluba Dugopolje\n\nPred vama je službena web stranica Košarkaškog kluba Dugopolje, mjesto na kojem ćemo na jednom mjestu objavljivati sve važne informacije vezane uz rad i djelovanje našeg kluba.\n\nNa stranici možete pronaći informacije o klubu, treninzima i upisima novih članova, rasporedu utakmica, rezultatima i natjecanjima naših selekcija. Poseban naglasak stavljen je na naše najmlađe košarkaše, njihov razvoj, trud i rezultate koje ostvaruju kroz sezonu.\n\nCilj nam je omogućiti djeci, roditeljima, trenerima, ali i svim ljubiteljima košarke jednostavan i brz pristup aktualnim informacijama. Rezultati utakmica i najvažnije novosti bit će redovito dostupni kako bi se uspjesi i rad naših selekcija mogli pratiti na jednom mjestu.\n\nVjerujemo da će ova stranica dodatno povezati naše članove, roditelje i prijatelje kluba te omogućiti bolji uvid u svakodnevni rad i život Košarkaškog kluba Dugopolje.\n\nHvala vam što pratite naš rad i što ste dio naše košarkaške priče.",
+    "url": "upisi.html",
+    "image": "assets/images/sluzbena-web-stranica.png",
+    "featured": true
   }
 ]
