@@ -1,0 +1,148 @@
+﻿<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Upisi u KK Dugopolje: informacije za roditelje, kategorije, prvi trening i prijavna forma.">
+    <meta name="theme-color" content="#07182f">
+    <meta property="og:title" content="Upisi | KK Dugopolje">
+    <meta property="og:description" content="Prijavi dijete u KK Dugopolje i upoznaj klub kroz prvi trening.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/JUNIOR NBA.jpg">
+    <meta property="og:url" content="https://kkdugopolje.hr/upisi.html">
+    <link rel="canonical" href="https://kkdugopolje.hr/upisi.html">
+    <title>Upisi | KK Dugopolje</title>
+    <link rel="icon" href="assets/images/grb.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Preskoči na sadržaj</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html"><img src="assets/images/grb.svg" alt="" class="brand__crest"><span><strong>KK Dugopolje</strong><small>Malo misto, veliki klub</small></span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Otvori navigaciju</span></button>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="Glavna navigacija"><a href="index.html">Naslovnica</a><a href="o-klubu.html">O klubu</a><a href="upisi.html">Upisi</a><a href="rezultati.html">Rezultati</a><a href="galerija.html">Galerija</a><a href="kontakt.html">Kontakt</a><a class="nav-cta" href="upisi.html">Upiši se</a></nav>
+    </header>
+    <div class="nav-backdrop" data-nav-backdrop hidden></div>
+
+    <main id="main">
+      <section class="page-hero">
+        <img src="assets/images/JUNIOR NBA.jpg" alt="Djeca na košarkaškom programu KK Dugopolje">
+        <div class="container page-hero__content reveal"><p class="eyebrow">Upisi novih članova</p><h1>Uđi u igru. Treniraj s nama.</h1><a class="btn btn--primary" href="#prijava">Prijavna forma</a></div>
+      </section>
+
+      <section class="section section--compact">
+        <div class="container split-feature">
+          <div class="reveal"><p class="eyebrow">Novi članovi</p><h2>Upisi</h2></div>
+          <div class="rich-text reveal"><p class="lead-copy">Upisi su otvoreni za djevojčice i dječake svih godišta. Nakon prvog treninga, treneri u dogovoru s roditeljima određuju grupu u kojoj će dijete započeti svoju novu košarkašku avanturu.</p></div>
+        </div>
+      </section>
+
+      <section class="section section--soft section--compact">
+        <div class="container">
+          <div class="section-kicker reveal"><p class="eyebrow">Grupe za rad</p><h2>Kategorije treninga</h2></div>
+          <div class="category-grid category-grid--compact training-category-grid">
+            <article class="info-panel training-category reveal"><h3>Početnici</h3></article>
+            <article class="info-panel training-category reveal"><h3>Stariji početnici</h3></article>
+            <article class="info-panel training-category reveal"><h3>Kadetkinje / juniorke</h3></article>
+            <article class="info-panel training-category reveal"><h3>Individualni rad</h3></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="teams-title">
+        <div class="container">
+          <div class="section-kicker reveal">
+            <p class="eyebrow">Ekipe</p>
+            <h2 id="teams-title">Naše ekipe</h2>
+          </div>
+          <div class="team-grid">
+            <!-- MINI BASKET -->
+            <article class="team-card reveal">
+              <img src="assets/images/nase_ekipe_1.jpeg" alt="Minibasket ekipa KK Dugopolje" loading="lazy">
+              <div><h3>Minibasket</h3><p>Dječaci i djevojčice.</p><a href="rezultati.html">Rezultati</a></div>
+            </article>
+            <!-- U13 M LIGA -->
+            <article class="team-card reveal">
+              <img src="assets/images/U13M upisi.jpeg" alt="U13 muška ekipa KK Dugopolje" loading="lazy">
+              <div><h3>U13 M</h3><p>Rezultati i raspored iz natjecanja.</p><a href="rezultati.html">Rezultati</a></div>
+            </article>
+            <!-- U13 Ž LIGA -->
+            <article class="team-card reveal">
+              <img src="assets/images/nase_ekipe_3.jpeg" alt="U13 ženska ekipa KK Dugopolje" loading="lazy">
+              <div><h3>U13 Ž</h3><p>Rezultati i raspored iz natjecanja.</p><a href="rezultati.html">Rezultati</a></div>
+            </article>
+            <!-- U14 Ž LIGA -->
+            <article class="team-card reveal">
+              <img src="assets/images/nase_ekipe_3.jpeg" alt="U14 ženska ekipa KK Dugopolje" loading="lazy">
+              <div><h3>U14 Ž</h3><p>Rezultati i raspored iz natjecanja.</p><a href="rezultati.html">Rezultati</a></div>
+            </article>
+            <!-- KADETKINJE U16 LIGA -->
+            <article class="team-card reveal">
+              <img src="assets/images/nase_ekipe_4.jpg" alt="Kadetkinje U16 ekipa KK Dugopolje" loading="lazy">
+              <div><h3>Kadetkinje U16</h3><p>Rezultati i raspored iz natjecanja.</p><a href="rezultati.html">Rezultati</a></div>
+            </article>
+            <!-- U18 Ž LIGA -->
+            <article class="team-card reveal">
+              <img src="assets/images/nase_ekipe_5.png" alt="U18 ženska ekipa KK Dugopolje" loading="lazy">
+              <div><h3>U18 Ž</h3><p>Rezultati i raspored iz natjecanja.</p><a href="rezultati.html">Rezultati</a></div>
+            </article>
+            <!-- DRUGA ŽENSKA LIGA -->
+            <article class="team-card team-card--logo reveal">
+              <img src="assets/images/grb bez pozadine.png" alt="Logo KK Dugopolje" loading="lazy">
+              <div><h3>Druga ženska liga</h3><p>Rezultati i raspored iz natjecanja.</p><a href="rezultati.html">Rezultati</a></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container two-card-grid">
+          <article class="info-panel reveal"><h2>Što dijete treba ponijeti?</h2><p>Sportsku opremu, čiste tenisice za dvoranu, bocu vode i dobru volju.</p></article>
+          <article class="info-panel reveal"><h2>Termini treninga</h2><p>Termini se potvrđuju prema kategoriji nakon prijave.</p></article>
+        </div>
+      </section>
+
+      <section class="section form-section" id="prijava">
+        <div class="container form-layout">
+          <div class="section-kicker reveal"><p class="eyebrow">Prijava</p><h2>Prijavi novog člana</h2><p>Ispuni podatke i klub će se javiti s informacijama o upisu i prvom treningu.</p></div>
+          <form class="site-form reveal" data-form="registration" action="kk-dugopolje-form.php" method="post" novalidate>
+            <input type="hidden" name="formType" value="registration">
+            <label class="form-hp" for="registrationWebsite">Web stranica<input id="registrationWebsite" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+            <label for="parentName">Ime i prezime roditelja<input id="parentName" name="parentName" type="text" autocomplete="name" required minlength="2"></label>
+            <label for="childName">Ime i prezime djeteta<input id="childName" name="childName" type="text" required minlength="2"></label>
+            <label for="birthYear">Godina rođenja djeteta<input id="birthYear" name="birthYear" type="number" min="2006" max="2022" required></label>
+            <label for="phone">Telefon<input id="phone" name="phone" type="tel" autocomplete="tel" required minlength="6"></label>
+            <label for="email">Email<input id="email" name="email" type="email" autocomplete="email" required></label>
+            <label for="message">Poruka<textarea id="message" name="message" rows="4" required minlength="10"></textarea></label>
+            <label class="checkbox-field" for="privacy"><input id="privacy" name="privacy" type="checkbox" required><span>Pristajem da me klub kontaktira vezano uz upit za upis i prihvaćam <a href="politika-privatnosti.html">politiku privatnosti</a>.</span></label>
+            <button class="btn btn--primary" type="submit">Pošalji prijavu</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container faq-grid">
+          <article class="info-panel reveal"><h3>Kako izgleda prvi trening?</h3><p>Dijete upoznaje ekipu, osnovne vježbe i ritam rada. Treneri procjenjuju predznanje i preporučuju kategoriju.</p></article>
+          <article class="info-panel reveal"><h3>Treba li prethodno iskustvo?</h3><p>Nije nužno. Upisi su otvoreni za početnike i djecu s iskustvom.</p></article>
+          <article class="info-panel reveal"><h3>Kome se javiti?</h3><p>Za dodatna pitanja kontaktiraj klub telefonom ili emailom.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><a class="footer-brand" href="index.html"><img src="assets/images/grb.svg" alt="">KK Dugopolje</a><p>Malo misto, veliki klub. Košarka, zajedništvo i mlade generacije.</p></div>
+        <nav aria-label="Footer navigacija"><h2>Navigacija</h2><a href="index.html">Naslovnica</a><a href="o-klubu.html">O klubu</a><a href="upisi.html">Upisi</a><a href="rezultati.html">Rezultati</a><a href="galerija.html">Galerija</a><a href="kontakt.html">Kontakt</a><a href="politika-privatnosti.html">Politika privatnosti</a><a href="politika-kolacica.html">Politika kolačića</a><a href="uvjeti-koristenja.html">Uvjeti korištenja</a></nav>
+        <div><h2>Podaci kluba</h2><p>KK Dugopolje</p><p>Dugopolje</p><p><a href="mailto:kkdugopolje2011@gmail.com">kkdugopolje2011@gmail.com</a></p><p><a href="tel:+385994055675">099 405 5675</a></p></div>
+        <div><h2>Društvene mreže</h2><p><a href="https://www.instagram.com/kkdugopolje/" target="_blank" rel="noreferrer">Instagram @kkdugopolje</a></p><p><a href="https://www.facebook.com/search/top?q=KK%20Dugopolje" target="_blank" rel="noreferrer">Facebook KK Dugopolje</a></p></div>
+      </div>
+      <div class="container footer-bottom"><p>&copy; 2026 KK Dugopolje. Sva prava pridržana.</p></div>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,158 @@
+media:
+  - name: images
+    label: Slike
+    input: assets/images
+    output: assets/images
+    categories: [image]
+    rename: safe
+  - name: documents
+    label: Dokumenti
+    input: assets
+    output: assets
+    categories: [document]
+    rename: false
+
+content:
+  - name: editable_content
+    label: Uredivi sadržaj
+    type: group
+    items:
+      - name: news
+        label: Novosti
+        type: file
+        path: data/news.json
+        format: json
+        list: true
+        view:
+          primary: title
+          fields: [date, tag, title]
+          sort: date
+          order: desc
+        fields:
+          - name: title
+            label: Naslov
+            type: string
+            required: true
+          - name: date
+            label: Datum objave
+            type: date
+            required: true
+          - name: tag
+            label: Oznaka
+            type: string
+            required: true
+          - name: summary
+            label: Kratki tekst
+            type: text
+            required: true
+          - name: url
+            label: Link
+            type: string
+            required: true
+            description: "Primjer: upisi.html, rezultati.html, galerija.html"
+          - name: image
+            label: Slika
+            type: image
+            options:
+              media: images
+          - name: alt
+            label: Opis slike
+            type: string
+          - name: featured
+            label: Istaknuta novost
+            type: boolean
+
+      - name: results
+        label: Rezultati
+        type: file
+        path: data/results.json
+        format: json
+        list: true
+        view:
+          primary: home
+          fields: [date, categoryLabel, home, away, score]
+          sort: date
+          order: desc
+        fields:
+          - name: date
+            label: Datum utakmice
+            type: date
+            required: true
+          - name: category
+            label: Filter kategorija
+            type: select
+            required: true
+            options:
+              values:
+                - name: minibasket
+                  label: Minibasket
+                - name: kadetkinje
+                  label: Kadetkinje U16
+                - name: djevojcice-u14
+                  label: Djevojčice U14
+                - name: u13
+                  label: Djevojčice U13
+                - name: djecaci-u13
+                  label: Dječaci U13
+          - name: categoryLabel
+            label: Naziv kategorije
+            type: string
+            required: true
+            description: "Tekst koji se prikazuje u tablici, npr. Kadetkinje U16."
+          - name: round
+            label: Kolo
+            type: string
+            required: true
+          - name: home
+            label: Domaćin
+            type: string
+            required: true
+          - name: away
+            label: Gost
+            type: string
+            required: true
+          - name: score
+            label: Rezultat
+            type: string
+            required: true
+            description: "Primjer: 52 - 48 ili - ako rezultat još nije upisan."
+          - name: scorers
+            label: Strijelci KK Dugopolje
+            type: text
+            required: true
+
+      - name: gallery
+        label: Galerija
+        type: file
+        path: data/gallery.json
+        format: json
+        list: true
+        view:
+          primary: alt
+          fields: [alt, layout]
+        fields:
+          - name: image
+            label: Slika
+            type: image
+            required: true
+            options:
+              media: images
+          - name: alt
+            label: Opis slike
+            type: string
+            required: true
+          - name: layout
+            label: Veličina prikaza
+            type: select
+            options:
+              values:
+                - name: standard
+                  label: Standard
+                - name: wide
+                  label: Široko
+                - name: tall
+                  label: Visoko
+
+settings:
+  content:
+    merge: true

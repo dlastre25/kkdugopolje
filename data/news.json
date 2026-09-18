@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Nova sezona uskoro počinje",
+    "date": "2026-09-02",
+    "tag": "Najnovije",
+    "summary": "Pripremamo raspored treninga, utakmica i klupskih aktivnosti za novu sezonu.",
+    "url": "rezultati.html",
+    "image": "assets/images/TOP SLIKA.jpg",
+    "alt": "KK Dugopolje klupski trenutak",
+    "featured": true
+  },
+  {
+    "title": "Upisi za mlađe kategorije",
+    "date": "2026-09-02",
+    "tag": "Upisi",
+    "summary": "Uskoro objavljujemo termine i osnovne informacije za nove članove.",
+    "url": "upisi.html",
+    "image": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "title": "Raspored pripremnih utakmica",
+    "date": "2026-09-02",
+    "tag": "Utakmice",
+    "summary": "Kalendar utakmica bit će dopunjen čim termini budu potvrđeni.",
+    "url": "rezultati.html",
+    "image": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "title": "Treninzi i klupske aktivnosti",
+    "date": "2026-09-02",
+    "tag": "Klub",
+    "summary": "Novosti iz dvorane i galerija trenutaka bit će dostupne na naslovnici.",
+    "url": "galerija.html",
+    "image": "",
+    "alt": "",
+    "featured": false
+  }
+]

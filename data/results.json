@@ -1,0 +1,52 @@
+[
+  {
+    "date": "2026-10-01",
+    "category": "minibasket",
+    "categoryLabel": "Minibasket",
+    "round": "1. kolo",
+    "home": "KK Dugopolje",
+    "away": "Protivnik",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-01",
+    "category": "kadetkinje",
+    "categoryLabel": "Kadetkinje U16",
+    "round": "1. kolo",
+    "home": "KK Dugopolje",
+    "away": "Protivnik",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-01",
+    "category": "djevojcice-u14",
+    "categoryLabel": "Djevojčice U14",
+    "round": "1. kolo",
+    "home": "Protivnik",
+    "away": "KK Dugopolje",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-01",
+    "category": "u13",
+    "categoryLabel": "Djevojčice U13",
+    "round": "1. kolo",
+    "home": "KK Dugopolje",
+    "away": "Protivnik",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-01",
+    "category": "djecaci-u13",
+    "categoryLabel": "Dječaci U13",
+    "round": "1. kolo",
+    "home": "Protivnik",
+    "away": "KK Dugopolje",
+    "score": "-",
+    "scorers": "-"
+  }
+]
