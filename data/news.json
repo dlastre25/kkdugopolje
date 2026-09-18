@@ -46,16 +46,5 @@
     "image": "assets/images/JUNIOR NBA.jpg",
     "alt": "Utakmica KK Dugopolje",
     "featured": false
-  },
-  {
-    "title": "Proba",
-    "slug": "probica",
-    "date": "2026-09-18",
-    "tag": "proba",
-    "subtitle": "Ovdje cemo vidjeti kako izgleda",
-    "summary": "Samo cemo ukratko opisati sto treba drugi odjeljak",
-    "content": "A ovdje dolazi\nnovi tekst\nkoji ide u novi odlomak\nsvaki novi ",
-    "image": "assets/images/stepenice.png",
-    "featured": false
   }
 ]
