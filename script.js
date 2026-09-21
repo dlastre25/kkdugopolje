@@ -313,7 +313,7 @@
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
         const filter = button.dataset.matchFilter;
-        const cards = document.querySelectorAll(".result-card[data-category], [data-match-row][data-category], .download-card[data-category]");
+        const cards = document.querySelectorAll(".result-card[data-category], [data-match-row][data-category], .download-card[data-category], .standings-table-wrap[data-category]");
         buttons.forEach((item) => item.classList.toggle("active", item === button));
         cards.forEach((card) => {
           card.hidden = filter !== "sve" && card.dataset.category !== filter;

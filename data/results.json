@@ -1,11 +1,11 @@
 [
   {
     "date": "2026-10-01",
-    "category": "minibasket",
-    "categoryLabel": "Minibasket",
+    "category": "kadetkinje",
+    "categoryLabel": "Kadetkinje U16",
     "round": "1. kolo",
     "home": "KK Dugopolje",
-    "away": "Protivnik",
+    "away": "ŽKK Split",
     "score": "-",
     "scorers": "-"
   },
@@ -14,8 +14,8 @@
     "category": "kadetkinje",
     "categoryLabel": "Kadetkinje U16",
     "round": "1. kolo",
-    "home": "KK Dugopolje",
-    "away": "Protivnik",
+    "home": "KA Žana Lelas",
+    "away": "ŽKK Salona",
     "score": "-",
     "scorers": "-"
   },
@@ -24,28 +24,18 @@
     "category": "djevojcice-u14",
     "categoryLabel": "Djevojčice U14",
     "round": "1. kolo",
-    "home": "Protivnik",
+    "home": "ŽKK Šibenik",
     "away": "KK Dugopolje",
     "score": "-",
     "scorers": "-"
   },
   {
     "date": "2026-10-01",
-    "category": "u13",
-    "categoryLabel": "Djevojčice U13",
+    "category": "djevojcice-u14",
+    "categoryLabel": "Djevojčice U14",
     "round": "1. kolo",
-    "home": "KK Dugopolje",
-    "away": "Protivnik",
-    "score": "-",
-    "scorers": "-"
-  },
-  {
-    "date": "2026-10-01",
-    "category": "djecaci-u13",
-    "categoryLabel": "Dječaci U13",
-    "round": "1. kolo",
-    "home": "Protivnik",
-    "away": "KK Dugopolje",
+    "home": "KK Solin",
+    "away": "KA Žana Lelas",
     "score": "-",
     "scorers": "-"
   }

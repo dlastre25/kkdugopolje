@@ -1,4 +1,4 @@
-media:
+﻿media:
   - name: images
     label: Slike
     input: assets/images
@@ -14,7 +14,7 @@ media:
 
 content:
   - name: editable_content
-    label: Uredivi sadržaj
+    label: Uredivi sadrĹľaj
     type: group
     items:
       - name: news
@@ -36,7 +36,7 @@ content:
           - name: slug
             label: URL oznaka
             type: string
-            description: "Kratka oznaka bez razmaka, npr. sluzbena-web-stranica. Ako ostane prazno, stranica će koristiti naslov."
+            description: "Kratka oznaka bez razmaka, npr. sluzbena-web-stranica. Ako ostane prazno, stranica Ä‡e koristiti naslov."
           - name: date
             label: Datum objave
             type: date
@@ -53,17 +53,17 @@ content:
             label: Kratki tekst za karticu
             type: text
             required: true
-            description: "Prikazuje se na naslovnici ispod naslova. Neka bude 1-2 rečenice."
+            description: "Prikazuje se na naslovnici ispod naslova. Neka bude 1-2 reÄŤenice."
           - name: content
-            label: Puni tekst članka
+            label: Puni tekst ÄŤlanka
             type: text
             required: true
-            description: "Ovo se prikazuje na stranici članka. Za novi odlomak ostavite prazan red."
+            description: "Ovo se prikazuje na stranici ÄŤlanka. Za novi odlomak ostavite prazan red."
           - name: url
-            label: Stari ručni link
+            label: Stari ruÄŤni link
             type: string
             required: false
-            description: "Više nije potrebno za novosti. Kartica se automatski otvara kao novost.html?slug=..."
+            description: "ViĹˇe nije potrebno za novosti. Kartica se automatski otvara kao novost.html?slug=..."
           - name: image
             label: Slika
             type: image
@@ -98,16 +98,10 @@ content:
             required: true
             options:
               values:
-                - name: minibasket
-                  label: Minibasket
                 - name: kadetkinje
                   label: Kadetkinje U16
                 - name: djevojcice-u14
-                  label: Djevojčice U14
-                - name: u13
-                  label: Djevojčice U13
-                - name: djecaci-u13
-                  label: Dječaci U13
+                  label: DjevojÄŤice U14
           - name: categoryLabel
             label: Naziv kategorije
             type: string
@@ -118,7 +112,7 @@ content:
             type: string
             required: true
           - name: home
-            label: Domaćin
+            label: DomaÄ‡in
             type: string
             required: true
           - name: away
@@ -129,7 +123,7 @@ content:
             label: Rezultat
             type: string
             required: true
-            description: "Primjer: 52 - 48 ili - ako rezultat još nije upisan."
+            description: "Primjer: 52 - 48 ili - ako rezultat joĹˇ nije upisan."
           - name: scorers
             label: Strijelci KK Dugopolje
             type: text
@@ -156,14 +150,14 @@ content:
             type: string
             required: true
           - name: layout
-            label: Veličina prikaza
+            label: VeliÄŤina prikaza
             type: select
             options:
               values:
                 - name: standard
                   label: Standard
                 - name: wide
-                  label: Široko
+                  label: Ĺ iroko
                 - name: tall
                   label: Visoko
 

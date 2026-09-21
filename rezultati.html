@@ -38,11 +38,8 @@
         <div class="container">
           <div class="toolbar reveal" aria-label="Filter kategorija">
             <button class="filter-button active" type="button" data-match-filter="sve">Sve</button>
-            <button class="filter-button" type="button" data-match-filter="minibasket">Minibasket</button>
             <button class="filter-button" type="button" data-match-filter="kadetkinje">Kadetkinje U16</button>
             <button class="filter-button" type="button" data-match-filter="djevojcice-u14">Djevojčice U14</button>
-            <button class="filter-button" type="button" data-match-filter="u13">Djevojčice U13</button>
-            <button class="filter-button" type="button" data-match-filter="djecaci-u13">Dječaci U13</button>
           </div>
 
           <div class="section-kicker reveal">
@@ -66,21 +63,12 @@
                 </tr>
               </thead>
               <tbody data-match-list>
-                <tr data-match-row data-category="minibasket">
-                  <td><time datetime="2026-10-01">01.10.2026.</time></td>
-                  <td><span class="match-label">Minibasket</span></td>
-                  <td>1. kolo</td>
-                  <th scope="row"><span class="club-cell"><img src="assets/images/grb.svg" alt="">KK Dugopolje</span></th>
-                  <td>Protivnik</td>
-                  <td><strong class="table-score">-</strong></td>
-                  <td>-</td>
-                </tr>
                 <tr data-match-row data-category="kadetkinje">
                   <td><time datetime="2026-10-01">01.10.2026.</time></td>
                   <td><span class="match-label">Kadetkinje U16</span></td>
                   <td>1. kolo</td>
                   <th scope="row"><span class="club-cell"><img src="assets/images/grb.svg" alt="">KK Dugopolje</span></th>
-                  <td>Protivnik</td>
+                  <td>ŽKK Split</td>
                   <td><strong class="table-score">-</strong></td>
                   <td>-</td>
                 </tr>
@@ -88,25 +76,7 @@
                   <td><time datetime="2026-10-01">01.10.2026.</time></td>
                   <td><span class="match-label">Djevojčice U14</span></td>
                   <td>1. kolo</td>
-                  <th scope="row">Protivnik</th>
-                  <td><span class="club-cell"><img src="assets/images/grb.svg" alt="">KK Dugopolje</span></td>
-                  <td><strong class="table-score">-</strong></td>
-                  <td>-</td>
-                </tr>
-                <tr data-match-row data-category="u13">
-                  <td><time datetime="2026-10-01">01.10.2026.</time></td>
-                  <td><span class="match-label">Djevojčice U13</span></td>
-                  <td>1. kolo</td>
-                  <th scope="row"><span class="club-cell"><img src="assets/images/grb.svg" alt="">KK Dugopolje</span></th>
-                  <td>Protivnik</td>
-                  <td><strong class="table-score">-</strong></td>
-                  <td>-</td>
-                </tr>
-                <tr data-match-row data-category="djecaci-u13">
-                  <td><time datetime="2026-10-01">01.10.2026.</time></td>
-                  <td><span class="match-label">Dječaci U13</span></td>
-                  <td>1. kolo</td>
-                  <th scope="row">Protivnik</th>
+                  <th scope="row">ŽKK Šibenik</th>
                   <td><span class="club-cell"><img src="assets/images/grb.svg" alt="">KK Dugopolje</span></td>
                   <td><strong class="table-score">-</strong></td>
                   <td>-</td>
@@ -115,20 +85,64 @@
             </table>
           </div>
 
+          <div class="pending-results-grid reveal" aria-label="Rezultati koji dolaze uskoro">
+            <article class="pending-result">
+              <span class="tag">U pripremi</span>
+              <h3>Minibasket</h3>
+              <p>Ovdje će biti rezultati minibasket utakmica i turnira čim ih klub počne voditi.</p>
+            </article>
+            <article class="pending-result">
+              <span class="tag">U pripremi</span>
+              <h3>U13 rezultati</h3>
+              <p>Ovdje će biti rezultati djevojčica i dječaka U13. Dodaju se za nekoliko mjeseci.</p>
+            </article>
+          </div>
+
+          <div class="section-kicker section-kicker--spaced reveal">
+            <p class="eyebrow">Lige</p>
+            <h2>Tablice liga</h2>
+            <p>Tablice uključuju i druge klubove kako bi navijači mogli pratiti cijelu ligu na jednom mjestu.</p>
+          </div>
+
+          <div class="league-table-grid">
+            <div class="standings-table-wrap reveal" data-category="djevojcice-u14">
+              <table class="standings-table">
+                <caption>Djevojčice U14 - Regija Jug</caption>
+                <thead>
+                  <tr><th scope="col">Klub</th><th scope="col">OU</th><th scope="col">P</th><th scope="col">I</th><th scope="col">Bod</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row"><span class="club-cell"><img src="assets/images/grb.svg" alt="">KK Dugopolje</span></th><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                  <tr><th scope="row">ŽKK Split</th><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                  <tr><th scope="row">ŽKK Šibenik</th><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                  <tr><th scope="row">KA Žana Lelas</th><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                  <tr><th scope="row">ŽKK Salona</th><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="standings-table-wrap reveal" data-category="kadetkinje">
+              <table class="standings-table">
+                <caption>Kadetkinje U16 - Regija Jug</caption>
+                <thead>
+                  <tr><th scope="col">Klub</th><th scope="col">OU</th><th scope="col">P</th><th scope="col">I</th><th scope="col">Bod</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row"><span class="club-cell"><img src="assets/images/grb.svg" alt="">KK Dugopolje</span></th><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                  <tr><th scope="row">ŽKK Split</th><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                  <tr><th scope="row">KK Solin</th><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                  <tr><th scope="row">KA Žana Lelas</th><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                  <tr><th scope="row">ŽKK Salona</th><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           <div class="section-kicker section-kicker--spaced reveal">
             <p class="eyebrow">Rasporedi</p>
             <h2>Preuzmi PDF</h2>
           </div>
 
           <div class="download-grid">
-            <article class="download-card reveal" data-category="u13">
-              <div>
-                <span class="tag">PDF raspored</span>
-                <h3>U13 - Grupa B</h3>
-                <p>Regija Jug</p>
-              </div>
-              <a class="btn btn--dark" href="assets/RASPORED%20U13%20(Grupa%20B)%20-%20Regija%20Jug.pdf" download>Preuzmi PDF</a>
-            </article>
             <article class="download-card reveal" data-category="djevojcice-u14">
               <div>
                 <span class="tag">PDF raspored</span>
