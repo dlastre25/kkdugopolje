@@ -1,6 +1,16 @@
 [
   {
-    "date": "2026-10-01",
+    "date": "-",
+    "category": "djevojcice-u13",
+    "categoryLabel": "Djevojčice U13",
+    "round": "-",
+    "home": "KK Dugopolje",
+    "away": "-",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-09-26",
     "category": "kadetkinje",
     "categoryLabel": "Kadetkinje U16",
     "round": "1. kolo",
@@ -10,7 +20,7 @@
     "scorers": "-"
   },
   {
-    "date": "2026-10-01",
+    "date": "2026-09-26",
     "category": "kadetkinje",
     "categoryLabel": "Kadetkinje U16",
     "round": "1. kolo",
