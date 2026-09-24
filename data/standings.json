@@ -7,12 +7,12 @@
   {
     "category": "djevojcice-u13",
     "categoryLabel": "Djevojčice U13",
-    "club": "Ragusa"
+    "club": "ŽKK Ragusa"
   },
   {
     "category": "djevojcice-u13",
     "categoryLabel": "Djevojčice U13",
-    "club": "KA Žana Lelas"
+    "club": "KAŽL"
   },
   {
     "category": "djevojcice-u13",
@@ -27,17 +27,22 @@
   {
     "category": "djevojcice-u13",
     "categoryLabel": "Djevojčice U13",
-    "club": "Albatros"
+    "club": "KK Albatros"
   },
   {
     "category": "djevojcice-u14",
     "categoryLabel": "Djevojčice U14",
-    "club": "KK Dugopolje"
+    "club": "Rhea Imotski"
   },
   {
     "category": "djevojcice-u14",
     "categoryLabel": "Djevojčice U14",
-    "club": "ŽKK Split"
+    "club": "KAŽL"
+  },
+  {
+    "category": "djevojcice-u14",
+    "categoryLabel": "Djevojčice U14",
+    "club": "KK Albatros"
   },
   {
     "category": "djevojcice-u14",
@@ -47,17 +52,22 @@
   {
     "category": "djevojcice-u14",
     "categoryLabel": "Djevojčice U14",
-    "club": "KK Solin"
+    "club": "ŽKK Zadar"
   },
   {
     "category": "djevojcice-u14",
     "categoryLabel": "Djevojčice U14",
-    "club": "KA Žana Lelas"
+    "club": "ŽKK Ragusa"
   },
   {
     "category": "djevojcice-u14",
     "categoryLabel": "Djevojčice U14",
-    "club": "ŽKK Salona"
+    "club": "KA Anđa Jelavić"
+  },
+  {
+    "category": "djevojcice-u14",
+    "categoryLabel": "Djevojčice U14",
+    "club": "KK Dugopolje"
   },
   {
     "category": "kadetkinje",
@@ -67,7 +77,7 @@
   {
     "category": "kadetkinje",
     "categoryLabel": "Kadetkinje U16",
-    "club": "Albatros"
+    "club": "KK Albatros"
   },
   {
     "category": "kadetkinje",
@@ -77,12 +87,12 @@
   {
     "category": "kadetkinje",
     "categoryLabel": "Kadetkinje U16",
-    "club": "Ragusa"
+    "club": "ŽKK Ragusa"
   },
   {
     "category": "kadetkinje",
     "categoryLabel": "Kadetkinje U16",
-    "club": "KA Žana Lelas"
+    "club": "KAŽL"
   },
   {
     "category": "kadetkinje",
