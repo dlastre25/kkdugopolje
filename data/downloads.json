@@ -1,0 +1,26 @@
+[
+  {
+    "category": "djevojcice-u13",
+    "title": "U13",
+    "description": "Grupa A - Regija Jug",
+    "file": "assets/RASPORED U13 (Grupa A - NOVI).pdf"
+  },
+  {
+    "category": "djevojcice-u13",
+    "title": "U13",
+    "description": "Grupa B - Regija Jug",
+    "file": "assets/U13 - Grupa B (NOVI).pdf"
+  },
+  {
+    "category": "djevojcice-u14",
+    "title": "U14",
+    "description": "Regija Jug",
+    "file": "assets/RASPORED U14 (Regija Jug).pdf"
+  },
+  {
+    "category": "kadetkinje",
+    "title": "U16",
+    "description": "Regija Jug",
+    "file": "assets/RASPORED U16 NOVI (Regija Jug).pdf"
+  }
+]

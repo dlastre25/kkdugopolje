@@ -490,12 +490,6 @@ p { margin: 0; }
 .standings-table tbody tr:nth-child(even) {
   background: var(--color-soft);
 }
-.standings-table tbody tr:first-child {
-  background: #eef8ff;
-}
-.standings-table tbody tr:first-child th {
-  color: var(--color-primary);
-}
 .match-table-wrap {
   overflow-x: auto;
   background: var(--color-light);

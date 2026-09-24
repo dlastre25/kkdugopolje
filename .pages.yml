@@ -14,7 +14,7 @@
 
 content:
   - name: editable_content
-    label: Uredivi sadrĹľaj
+    label: Uredivi sadržaj
     type: group
     items:
       - name: news
@@ -36,7 +36,7 @@ content:
           - name: slug
             label: URL oznaka
             type: string
-            description: "Kratka oznaka bez razmaka, npr. sluzbena-web-stranica. Ako ostane prazno, stranica Ä‡e koristiti naslov."
+            description: "Kratka oznaka bez razmaka, npr. sluzbena-web-stranica. Ako ostane prazno, stranica će koristiti naslov."
           - name: date
             label: Datum objave
             type: date
@@ -53,17 +53,17 @@ content:
             label: Kratki tekst za karticu
             type: text
             required: true
-            description: "Prikazuje se na naslovnici ispod naslova. Neka bude 1-2 reÄŤenice."
+            description: "Prikazuje se na naslovnici ispod naslova. Neka bude 1-2 rečenice."
           - name: content
-            label: Puni tekst ÄŤlanka
+            label: Puni tekst članka
             type: text
             required: true
-            description: "Ovo se prikazuje na stranici ÄŤlanka. Za novi odlomak ostavite prazan red."
+            description: "Ovo se prikazuje na stranici članka. Za novi odlomak ostavite prazan red."
           - name: url
-            label: Stari ruÄŤni link
+            label: Stari ručni link
             type: string
             required: false
-            description: "ViĹˇe nije potrebno za novosti. Kartica se automatski otvara kao novost.html?slug=..."
+            description: "Više nije potrebno za novosti. Kartica se automatski otvara kao novost.html?slug=..."
           - name: image
             label: Slika
             type: image
@@ -100,8 +100,10 @@ content:
               values:
                 - name: kadetkinje
                   label: Kadetkinje U16
+                - name: djevojcice-u13
+                  label: Djevojčice U13
                 - name: djevojcice-u14
-                  label: DjevojÄŤice U14
+                  label: Djevojčice U14
           - name: categoryLabel
             label: Naziv kategorije
             type: string
@@ -112,7 +114,7 @@ content:
             type: string
             required: true
           - name: home
-            label: DomaÄ‡in
+            label: Domaćin
             type: string
             required: true
           - name: away
@@ -123,11 +125,85 @@ content:
             label: Rezultat
             type: string
             required: true
-            description: "Primjer: 52 - 48 ili - ako rezultat joĹˇ nije upisan."
+            description: "Primjer: 52 - 48 ili - ako rezultat još nije upisan."
           - name: scorers
-            label: Strijelci KK Dugopolje
+            label: Strijelci
             type: text
             required: true
+
+      - name: standings
+        label: Tablice liga
+        type: file
+        path: data/standings.json
+        format: json
+        list: true
+        view:
+          primary: club
+          fields: [categoryLabel, club]
+        fields:
+          - name: category
+            label: Liga / filter
+            type: select
+            required: true
+            options:
+              values:
+                - name: djevojcice-u13
+                  label: Djevojčice U13
+                - name: djevojcice-u14
+                  label: Djevojčice U14
+                - name: kadetkinje
+                  label: Kadetkinje U16
+          - name: categoryLabel
+            label: Naziv lige
+            type: string
+            required: true
+            description: "Primjer: Djevojčice U14 ili Kadetkinje U16."
+          - name: club
+            label: Klub
+            type: string
+            required: true
+            description: "Dodajte ili uklonite klub iz tablice. Bodovi se na stranici računaju iz upisanih rezultata."
+
+      - name: downloads
+        label: PDF rasporedi
+        type: file
+        path: data/downloads.json
+        format: json
+        list: true
+        view:
+          primary: title
+          fields: [category, description, file]
+        fields:
+          - name: category
+            label: Kategorija / filter
+            type: select
+            required: true
+            options:
+              values:
+                - name: djevojcice-u13
+                  label: Djevojčice U13
+                - name: djevojcice-u14
+                  label: Djevojčice U14
+                - name: kadetkinje
+                  label: Kadetkinje U16
+          - name: title
+            label: Naslov kartice
+            type: string
+            required: true
+            description: "Primjer: U13, U14 ili U16."
+          - name: description
+            label: Opis
+            type: string
+            required: true
+            description: "Primjer: Grupa B - Regija Jug."
+          - name: file
+            label: PDF dokument
+            type: file
+            required: true
+            options:
+              media: documents
+              categories: [document]
+              extensions: [pdf]
 
       - name: gallery
         label: Galerija
@@ -150,14 +226,14 @@ content:
             type: string
             required: true
           - name: layout
-            label: VeliÄŤina prikaza
+            label: Veličina prikaza
             type: select
             options:
               values:
                 - name: standard
                   label: Standard
                 - name: wide
-                  label: Ĺ iroko
+                  label: Široko
                 - name: tall
                   label: Visoko
 

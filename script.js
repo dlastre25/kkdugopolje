@@ -145,8 +145,117 @@
 
     const clubCell = (name) => {
       const safeName = escapeHtml(name || "-");
-      if (String(name).trim().toLowerCase() !== "kk dugopolje") return safeName;
-      return `<span class="club-cell"><img src="assets/images/grb.svg" alt="">KK Dugopolje</span>`;
+      return safeName;
+    };
+
+    const normalizeClub = (value) => String(value ?? "")
+      .trim()
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, " ");
+
+    const parseScore = (value) => {
+      const match = String(value ?? "").match(/(\d+)\s*[-:]\s*(\d+)/);
+      if (!match) return null;
+      const home = Number(match[1]);
+      const away = Number(match[2]);
+      if (!Number.isFinite(home) || !Number.isFinite(away)) return null;
+      return { home, away };
+    };
+
+    const standingsStats = (teams, matches) => {
+      const rows = teams.map((team, index) => ({
+        ...team,
+        index,
+        played: 0,
+        wins: 0,
+        losses: 0,
+        points: 0
+      }));
+      const byClub = new Map(rows.map((row) => [`${row.category}::${normalizeClub(row.club)}`, row]));
+
+      matches.forEach((match) => {
+        const score = parseScore(match.score);
+        if (!score || score.home === score.away) return;
+        const home = byClub.get(`${match.category}::${normalizeClub(match.home)}`);
+        const away = byClub.get(`${match.category}::${normalizeClub(match.away)}`);
+        if (!home || !away) return;
+
+        home.played += 1;
+        away.played += 1;
+        if (score.home > score.away) {
+          home.wins += 1;
+          away.losses += 1;
+          home.points += 2;
+          away.points += 1;
+        } else {
+          away.wins += 1;
+          home.losses += 1;
+          away.points += 2;
+          home.points += 1;
+        }
+      });
+
+      return rows.sort((a, b) => (
+        b.points - a.points
+        || b.wins - a.wins
+        || a.losses - b.losses
+        || a.index - b.index
+      ));
+    };
+
+    const renderStandings = (teams, matches) => {
+      if (!Array.isArray(teams) || !teams.length) return;
+      const rows = standingsStats(teams, Array.isArray(matches) ? matches : []);
+      document.querySelectorAll(".standings-table-wrap[data-category]").forEach((wrap) => {
+        const body = wrap.querySelector("[data-standings-list]");
+        if (!body) return;
+        const categoryRows = rows.filter((row) => row.category === wrap.dataset.category);
+        if (!categoryRows.length) return;
+        body.innerHTML = categoryRows.map((row) => `
+          <tr>
+            <th scope="row">${escapeHtml(row.club)}</th>
+            <td>${row.played}</td>
+            <td>${row.wins}</td>
+            <td>${row.losses}</td>
+            <td>${row.points}</td>
+          </tr>
+        `).join("");
+      });
+      applyActiveMatchFilter();
+    };
+
+    const applyActiveMatchFilter = () => {
+      const active = document.querySelector("[data-match-filter].active");
+      const filter = active?.dataset.matchFilter || "sve";
+      const cards = document.querySelectorAll(".result-card[data-category], [data-match-row][data-category], .download-card[data-category], .standings-table-wrap[data-category]");
+      const sections = document.querySelectorAll("[data-filter-section]");
+      cards.forEach((card) => {
+        card.hidden = filter !== "sve" && card.dataset.category !== filter;
+      });
+      sections.forEach((section) => {
+        section.hidden = section.dataset.filterSection !== filter;
+      });
+    };
+
+    const renderDownloads = (items) => {
+      const list = document.querySelector("[data-download-list]");
+      if (!list || !Array.isArray(items) || !items.length) return;
+      list.innerHTML = items.map((item) => {
+        const file = normalizePath(item.file);
+        return `
+          <article class="download-card reveal is-visible" data-category="${escapeHtml(item.category)}">
+            <div>
+              <span class="tag">${escapeHtml(item.tag || "PDF raspored")}</span>
+              <h3>${escapeHtml(item.title)}</h3>
+              <p>${escapeHtml(item.description)}</p>
+            </div>
+            <a class="btn btn--dark" href="${escapeHtml(file)}" download>Preuzmi PDF</a>
+          </article>
+        `;
+      }).join("");
+      applyActiveMatchFilter();
     };
 
     fetchJson("data/news.json").then((items) => {
@@ -223,9 +332,12 @@
       `;
     }).catch(() => {});
 
+    let matchResults = [];
+
     fetchJson("data/results.json").then((items) => {
       const list = document.querySelector("[data-match-list]");
       if (!list || !Array.isArray(items) || !items.length) return;
+      matchResults = items;
       list.innerHTML = items.map((item) => `
         <tr data-match-row data-category="${escapeHtml(item.category)}">
           <td><time datetime="${escapeHtml(item.date)}">${formatDate(item.date)}</time></td>
@@ -238,6 +350,15 @@
         </tr>
       `).join("");
     }).catch(() => {});
+
+    Promise.all([
+      fetchJson("data/standings.json"),
+      fetchJson("data/results.json").catch(() => matchResults)
+    ]).then(([teams, matches]) => {
+      renderStandings(teams, matches);
+    }).catch(() => {});
+
+    fetchJson("data/downloads.json").then(renderDownloads).catch(() => {});
 
     fetchJson("data/gallery.json").then((items) => {
       const list = document.querySelector("[data-gallery-list]");
