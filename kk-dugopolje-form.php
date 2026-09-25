@@ -4,16 +4,14 @@ declare(strict_types=1);
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
-require __DIR__ . '/vendor/autoload.php';
+$autoloadPath = __DIR__ . '/vendor/autoload.php';
 
-$configPath = dirname(dirname(__DIR__)) . '/kkdugopolje-mail-config.php';
+$configCandidates = [
+    dirname(dirname(__DIR__)) . '/kkdugopolje-mail-config.php',
+    dirname(__DIR__) . '/kkdugopolje-mail-config.php',
+];
+$configPath = null;
 
-if (!file_exists($configPath)) {
-    http_response_code(500);
-    exit('Mail konfiguracija nije pronađena.');
-}
-
-$config = require $configPath;
 
 function wants_json(): bool
 {
@@ -60,6 +58,25 @@ function clean_body(string $value): string
     $value = trim($value);
     return preg_replace('/[ \t]+/', ' ', $value) ?? $value;
 }
+
+if (!file_exists($autoloadPath)) {
+    respond(false, 'Mail servis nije instaliran na serveru.', 500);
+}
+
+require $autoloadPath;
+
+foreach ($configCandidates as $candidate) {
+    if (file_exists($candidate)) {
+        $configPath = $candidate;
+        break;
+    }
+}
+
+if ($configPath === null) {
+    respond(false, 'Mail konfiguracija nije pronadena na serveru.', 500);
+}
+
+$config = require $configPath;
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     respond(false, 'Neispravan zahtjev.', 405);
