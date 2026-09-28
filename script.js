@@ -137,8 +137,17 @@
       }).format(date);
     };
 
+    const uncachedUrl = (url) => {
+      const nextUrl = new URL(url, window.location.href);
+      nextUrl.searchParams.set("v", String(Date.now()));
+      return nextUrl;
+    };
+
     const fetchJson = async (url) => {
-      const response = await fetch(url, { headers: { "Accept": "application/json" } });
+      const response = await fetch(uncachedUrl(url), {
+        cache: "no-store",
+        headers: { "Accept": "application/json" }
+      });
       if (!response.ok) throw new Error(`Cannot load ${url}`);
       return response.json();
     };
@@ -163,6 +172,10 @@
       if (!Number.isFinite(home) || !Number.isFinite(away)) return null;
       return { home, away };
     };
+
+    const scoreClass = (value) => parseScore(value)
+      ? "table-score"
+      : "table-score table-score--status";
 
     const standingsStats = (teams, matches) => {
       const rows = teams.map((team, index) => ({
@@ -345,7 +358,7 @@
           <td>${escapeHtml(item.round)}</td>
           <th scope="row">${clubCell(item.home)}</th>
           <td>${clubCell(item.away)}</td>
-          <td><strong class="table-score">${escapeHtml(item.score)}</strong></td>
+          <td><strong class="${scoreClass(item.score)}">${escapeHtml(item.score)}</strong></td>
           <td>${escapeHtml(item.scorers)}</td>
         </tr>
       `).join("");

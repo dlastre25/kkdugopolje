@@ -540,6 +540,10 @@ p { margin: 0; }
   min-width: 180px;
   color: var(--color-primary-dark);
 }
+.match-table th:nth-child(6),
+.match-table td:nth-child(6) {
+  text-align: center;
+}
 .club-cell {
   display: inline-flex;
   align-items: center;
@@ -569,11 +573,15 @@ p { margin: 0; }
   display: inline-block;
   min-width: 68px;
   color: var(--color-primary);
-  font-family: var(--font-heading);
-  font-size: 1.7rem;
-  line-height: 0.9;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.15;
   text-align: center;
   white-space: nowrap;
+}
+.table-score--status {
+  min-width: 0;
 }
 .download-grid {
   display: grid;
