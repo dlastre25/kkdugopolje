@@ -12,6 +12,17 @@
     }
   }
 
+  function updateMatchRoundSeparators() {
+    const rows = [...document.querySelectorAll("[data-match-row]")];
+    rows.forEach((row) => row.classList.remove("match-round-end"));
+    const visibleRows = rows.filter((row) => !row.hidden);
+    visibleRows.forEach((row, index) => {
+      const round = row.cells[2]?.textContent.trim();
+      const nextRound = visibleRows[index + 1]?.cells[2]?.textContent.trim();
+      row.classList.toggle("match-round-end", Boolean(round && nextRound && round !== nextRound));
+    });
+  }
+
   run(() => {
     const header = document.querySelector("[data-header]");
     const toggle = document.querySelector("[data-nav-toggle]");
@@ -250,6 +261,7 @@
       sections.forEach((section) => {
         section.hidden = section.dataset.filterSection !== filter;
       });
+      updateMatchRoundSeparators();
     };
 
     const renderDownloads = (items) => {
@@ -362,6 +374,7 @@
           <td>${escapeHtml(item.scorers)}</td>
         </tr>
       `).join("");
+      updateMatchRoundSeparators();
     }).catch(() => {});
 
     Promise.all([
@@ -455,8 +468,10 @@
         sections.forEach((section) => {
           section.hidden = section.dataset.filterSection !== filter;
         });
+        updateMatchRoundSeparators();
       });
     });
+    updateMatchRoundSeparators();
   });
 
   run(() => {
