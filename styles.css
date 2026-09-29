@@ -538,12 +538,12 @@ p { margin: 0; }
 }
 .match-table tbody tr.match-round-end th,
 .match-table tbody tr.match-round-end td {
-  border-bottom: 4px solid #0873b5;
-  box-shadow: 0 4px 0 rgba(8, 115, 181, 0.18);
+  border-bottom: 5px solid #0873b5 !important;
+  box-shadow: inset 0 -2px 0 #35a7ed, 0 4px 0 rgba(8, 115, 181, 0.18);
 }
 .match-table tbody tr.match-round-end + tr th,
 .match-table tbody tr.match-round-end + tr td {
-  border-top-color: #0873b5;
+  border-top-color: #0873b5 !important;
 }
 .match-table tbody th {
   min-width: 180px;

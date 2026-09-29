@@ -17,10 +17,16 @@
     rows.forEach((row) => row.classList.remove("match-round-end"));
     const visibleRows = rows.filter((row) => !row.hidden);
     visibleRows.forEach((row, index) => {
-      const round = row.cells[2]?.textContent.trim();
-      const nextRound = visibleRows[index + 1]?.cells[2]?.textContent.trim();
+      const round = row.dataset.round || row.cells[2]?.textContent.trim();
+      const nextRound = visibleRows[index + 1]?.dataset.round || visibleRows[index + 1]?.cells[2]?.textContent.trim();
       row.classList.toggle("match-round-end", Boolean(round && nextRound && round !== nextRound));
     });
+  }
+
+  function isRoundEnd(items, index) {
+    const round = String(items[index]?.round ?? "").trim();
+    const nextRound = String(items[index + 1]?.round ?? "").trim();
+    return Boolean(round && nextRound && round !== nextRound);
   }
 
   run(() => {
@@ -363,8 +369,8 @@
       const list = document.querySelector("[data-match-list]");
       if (!list || !Array.isArray(items) || !items.length) return;
       matchResults = items;
-      list.innerHTML = items.map((item) => `
-        <tr data-match-row data-category="${escapeHtml(item.category)}">
+      list.innerHTML = items.map((item, index) => `
+        <tr class="${isRoundEnd(items, index) ? "match-round-end" : ""}" data-match-row data-round="${escapeHtml(item.round)}" data-category="${escapeHtml(item.category)}">
           <td><time datetime="${escapeHtml(item.date)}">${formatDate(item.date)}</time></td>
           <td><span class="match-label">${escapeHtml(item.categoryLabel)}</span></td>
           <td>${escapeHtml(item.round)}</td>
