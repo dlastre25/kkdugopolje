@@ -2,3 +2,6 @@ RewriteEngine On
 
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{QUERY_STRING} !(^|&)v=round-separator-2(&|$)
+RewriteRule ^rezultati\.html$ rezultati.html?v=round-separator-2 [R=302,L]
