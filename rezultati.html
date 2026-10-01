@@ -41,6 +41,7 @@
             <button class="filter-button" type="button" data-match-filter="djevojcice-u13">Djevojčice U13</button>
             <button class="filter-button" type="button" data-match-filter="djevojcice-u14">Djevojčice U14</button>
             <button class="filter-button" type="button" data-match-filter="kadetkinje">Kadetkinje U16</button>
+            <button class="filter-button" type="button" data-match-filter="turnir-sv-mihovila">Turnir Sv. Mihovila</button>
           </div>
 
           <div class="section-kicker reveal">
@@ -90,16 +91,19 @@
                   <td><strong class="table-score">-</strong></td>
                   <td>-</td>
                 </tr>
+                <tr class="match-empty-row" data-empty-match hidden>
+                  <td colspan="7">Rezultati za odabranu kategoriju bit će dodani nakon unosa u CMS.</td>
+                </tr>
               </tbody>
             </table>
           </div>
 
-          <div class="section-kicker section-kicker--spaced reveal">
+          <div class="section-kicker section-kicker--spaced reveal" data-league-section>
             <p class="eyebrow">Lige</p>
             <h2>Tablice liga</h2>
           </div>
 
-          <div class="league-table-grid">
+          <div class="league-table-grid" data-league-section>
             <div class="standings-table-wrap reveal" data-category="djevojcice-u13">
               <table class="standings-table">
                 <caption>Djevojčice U13 - Grupa B</caption>
@@ -152,12 +156,12 @@
             </div>
           </div>
 
-          <div class="section-kicker section-kicker--spaced reveal">
+          <div class="section-kicker section-kicker--spaced reveal" data-download-section>
             <p class="eyebrow">Rasporedi</p>
             <h2>Preuzmi PDF</h2>
           </div>
 
-          <div class="download-grid" data-download-list>
+          <div class="download-grid" data-download-list data-download-section>
             <article class="download-card reveal" data-category="djevojcice-u13">
               <div>
                 <span class="tag">PDF raspored</span>

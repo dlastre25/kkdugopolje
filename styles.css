@@ -545,6 +545,11 @@ p { margin: 0; }
 .match-table tbody tr.match-round-end + tr td {
   border-top-color: #0873b5 !important;
 }
+.match-empty-row td {
+  color: var(--color-muted);
+  font-weight: 800;
+  text-align: center;
+}
 .match-table tbody th {
   min-width: 180px;
   color: var(--color-primary-dark);

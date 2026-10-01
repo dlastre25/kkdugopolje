@@ -23,6 +23,14 @@
     });
   }
 
+  function updateEmptyMatchState() {
+    const emptyRow = document.querySelector("[data-empty-match]");
+    if (!emptyRow) return;
+    const hasVisibleRows = [...document.querySelectorAll("[data-match-row]")]
+      .some((row) => !row.hidden);
+    emptyRow.hidden = hasVisibleRows;
+  }
+
   function isRoundEnd(items, index) {
     const round = String(items[index]?.round ?? "").trim();
     const nextRound = String(items[index + 1]?.round ?? "").trim();
@@ -261,12 +269,17 @@
       const filter = active?.dataset.matchFilter || "sve";
       const cards = document.querySelectorAll(".result-card[data-category], [data-match-row][data-category], .download-card[data-category], .standings-table-wrap[data-category]");
       const sections = document.querySelectorAll("[data-filter-section]");
+      const tournamentOnly = filter === "turnir-sv-mihovila";
       cards.forEach((card) => {
         card.hidden = filter !== "sve" && card.dataset.category !== filter;
       });
       sections.forEach((section) => {
         section.hidden = section.dataset.filterSection !== filter;
       });
+      document.querySelectorAll("[data-league-section], [data-download-section]").forEach((section) => {
+        section.hidden = tournamentOnly;
+      });
+      updateEmptyMatchState();
       updateMatchRoundSeparators();
     };
 
@@ -379,7 +392,12 @@
           <td><strong class="${scoreClass(item.score)}">${escapeHtml(item.score)}</strong></td>
           <td>${escapeHtml(item.scorers)}</td>
         </tr>
-      `).join("");
+      `).join("") + `
+        <tr class="match-empty-row" data-empty-match hidden>
+          <td colspan="7">Rezultati za odabranu kategoriju bit će dodani nakon unosa u CMS.</td>
+        </tr>
+      `;
+      updateEmptyMatchState();
       updateMatchRoundSeparators();
     }).catch(() => {});
 
@@ -474,9 +492,14 @@
         sections.forEach((section) => {
           section.hidden = section.dataset.filterSection !== filter;
         });
+        document.querySelectorAll("[data-league-section], [data-download-section]").forEach((section) => {
+          section.hidden = filter === "turnir-sv-mihovila";
+        });
+        updateEmptyMatchState();
         updateMatchRoundSeparators();
       });
     });
+    updateEmptyMatchState();
     updateMatchRoundSeparators();
   });
 

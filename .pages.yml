@@ -104,6 +104,8 @@ content:
                   label: Djevojčice U13
                 - name: djevojcice-u14
                   label: Djevojčice U14
+                - name: turnir-sv-mihovila
+                  label: Turnir Sv. Mihovila
           - name: categoryLabel
             label: Naziv kategorije
             type: string
