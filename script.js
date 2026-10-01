@@ -31,6 +31,13 @@
     emptyRow.hidden = hasVisibleRows;
   }
 
+  function updateMatchRoundHeader() {
+    const active = document.querySelector("[data-match-filter].active");
+    const roundHeader = document.querySelector("[data-match-round-header]");
+    if (!roundHeader) return;
+    roundHeader.textContent = active?.dataset.matchFilter === "turnir-sv-mihovila" ? "Vrijeme" : "Kolo";
+  }
+
   function isRoundEnd(items, index) {
     const round = String(items[index]?.round ?? "").trim();
     const nextRound = String(items[index + 1]?.round ?? "").trim();
@@ -271,7 +278,9 @@
       const sections = document.querySelectorAll("[data-filter-section]");
       const tournamentOnly = filter === "turnir-sv-mihovila";
       cards.forEach((card) => {
-        card.hidden = filter !== "sve" && card.dataset.category !== filter;
+        card.hidden = filter === "sve"
+          ? card.dataset.category === "turnir-sv-mihovila"
+          : card.dataset.category !== filter;
       });
       sections.forEach((section) => {
         section.hidden = section.dataset.filterSection !== filter;
@@ -279,6 +288,7 @@
       document.querySelectorAll("[data-league-section], [data-download-section]").forEach((section) => {
         section.hidden = tournamentOnly;
       });
+      updateMatchRoundHeader();
       updateEmptyMatchState();
       updateMatchRoundSeparators();
     };
@@ -397,8 +407,7 @@
           <td colspan="7">Rezultati za odabranu kategoriju bit će dodani nakon unosa u CMS.</td>
         </tr>
       `;
-      updateEmptyMatchState();
-      updateMatchRoundSeparators();
+      applyActiveMatchFilter();
     }).catch(() => {});
 
     Promise.all([
@@ -487,7 +496,9 @@
         const cards = document.querySelectorAll(".result-card[data-category], [data-match-row][data-category], .download-card[data-category], .standings-table-wrap[data-category]");
         buttons.forEach((item) => item.classList.toggle("active", item === button));
         cards.forEach((card) => {
-          card.hidden = filter !== "sve" && card.dataset.category !== filter;
+          card.hidden = filter === "sve"
+            ? card.dataset.category === "turnir-sv-mihovila"
+            : card.dataset.category !== filter;
         });
         sections.forEach((section) => {
           section.hidden = section.dataset.filterSection !== filter;
@@ -495,10 +506,12 @@
         document.querySelectorAll("[data-league-section], [data-download-section]").forEach((section) => {
           section.hidden = filter === "turnir-sv-mihovila";
         });
+        updateMatchRoundHeader();
         updateEmptyMatchState();
         updateMatchRoundSeparators();
       });
     });
+    updateMatchRoundHeader();
     updateEmptyMatchState();
     updateMatchRoundSeparators();
   });
