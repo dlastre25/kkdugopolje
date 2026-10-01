@@ -58,5 +58,75 @@
     "away": "ŽKK Ragusa",
     "score": " ",
     "scorers": " "
+  },
+  {
+    "date": "2026-10-03",
+    "category": "turnir-sv-mihovila",
+    "categoryLabel": "Raspored turnira",
+    "round": "12:15",
+    "home": "KK Dugopolje",
+    "away": "ŽKK Zrinjski 2010",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-03",
+    "category": "turnir-sv-mihovila",
+    "categoryLabel": "Raspored turnira",
+    "round": "13:30",
+    "home": "KK Dugopolje",
+    "away": "ŽKK Pazin",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-03",
+    "category": "turnir-sv-mihovila",
+    "categoryLabel": "Raspored turnira",
+    "round": "14:45",
+    "home": "ŽKK Pazin",
+    "away": "ŽKK Zrinjski 2010",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-03",
+    "category": "turnir-sv-mihovila",
+    "categoryLabel": "Raspored turnira",
+    "round": "16:00",
+    "home": "KA Anđa Jelavić",
+    "away": "ŽKK Studio Zagreb",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-03",
+    "category": "turnir-sv-mihovila",
+    "categoryLabel": "Raspored turnira",
+    "round": "17:15",
+    "home": "KA Anđa Jelavić",
+    "away": "ŽKK Rovinj",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-03",
+    "category": "turnir-sv-mihovila",
+    "categoryLabel": "Raspored turnira",
+    "round": "18:45",
+    "home": "ŽKK Studio Zagreb",
+    "away": "ŽKK Rovinj",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-04",
+    "category": "turnir-sv-mihovila",
+    "categoryLabel": "Raspored turnira",
+    "round": "Nedjelja 04.10.2026",
+    "home": " ",
+    "away": " ",
+    "score": " ",
+    "scorers": " "
   }
 ]
