@@ -194,6 +194,7 @@
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
+      .replace(/^(zkk|kk)\s+/, "")
       .replace(/\s+/g, " ");
 
     const parseScore = (value) => {
@@ -203,6 +204,11 @@
       const away = Number(match[2]);
       if (!Number.isFinite(home) || !Number.isFinite(away)) return null;
       return { home, away };
+    };
+
+    const countsAsFixture = (value) => {
+      const score = String(value ?? "").trim().toLowerCase();
+      return score !== "-" && score !== "odgođeno" && score !== "odgodeno";
     };
 
     const scoreClass = (value) => parseScore(value)
@@ -221,14 +227,18 @@
       const byClub = new Map(rows.map((row) => [`${row.category}::${normalizeClub(row.club)}`, row]));
 
       matches.forEach((match) => {
-        const score = parseScore(match.score);
-        if (!score || score.home === score.away) return;
         const home = byClub.get(`${match.category}::${normalizeClub(match.home)}`);
         const away = byClub.get(`${match.category}::${normalizeClub(match.away)}`);
         if (!home || !away) return;
 
-        home.played += 1;
-        away.played += 1;
+        if (countsAsFixture(match.score)) {
+          home.played += 1;
+          away.played += 1;
+        }
+
+        const score = parseScore(match.score);
+        if (!score || score.home === score.away) return;
+
         if (score.home > score.away) {
           home.wins += 1;
           away.losses += 1;
