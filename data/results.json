@@ -123,9 +123,9 @@
     "date": "2026-10-04",
     "category": "turnir-sv-mihovila",
     "categoryLabel": "Kadetkinje U16",
-    "round": "Nedjelja 04.10.2026",
-    "home": " ",
-    "away": " ",
+    "round": "Utakmica za 5. mjesto",
+    "home": "ŽKK Rovinj",
+    "away": "ŽKK Pazin",
     "score": " ",
     "scorers": " "
   },
@@ -133,9 +133,9 @@
     "date": "2026-10-04",
     "category": "turnir-sv-mihovila",
     "categoryLabel": "Kadetkinje U16",
-    "round": "Utakmica za 5. mjesto",
-    "home": "ŽKK Rovinj",
-    "away": "ŽKK Pazin",
+    "round": "Utakmica za 3. mjesto",
+    "home": "ŽKK Studio Zagreb",
+    "away": "ŽKK Zrinjski 2010",
     "score": " ",
     "scorers": " "
   }
