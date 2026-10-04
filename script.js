@@ -206,11 +206,6 @@
       return { home, away };
     };
 
-    const countsAsFixture = (value) => {
-      const score = String(value ?? "").trim().toLowerCase();
-      return score !== "-" && score !== "odgođeno" && score !== "odgodeno";
-    };
-
     const scoreClass = (value) => parseScore(value)
       ? "table-score"
       : "table-score table-score--status";
@@ -231,13 +226,12 @@
         const away = byClub.get(`${match.category}::${normalizeClub(match.away)}`);
         if (!home || !away) return;
 
-        if (countsAsFixture(match.score)) {
-          home.played += 1;
-          away.played += 1;
-        }
-
         const score = parseScore(match.score);
-        if (!score || score.home === score.away) return;
+        if (!score) return;
+
+        home.played += 1;
+        away.played += 1;
+        if (score.home === score.away) return;
 
         if (score.home > score.away) {
           home.wins += 1;
