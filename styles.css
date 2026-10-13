@@ -1412,13 +1412,16 @@ input:focus, textarea:focus, button:focus-visible, a:focus-visible {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 8px 18px;
   margin-top: 32px;
   padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.9rem;
-  text-align: center;
+  text-align: left;
+}
+.footer-credit {
+  margin-left: auto;
 }
 .footer-credit a {
   color: var(--color-light);
@@ -1787,6 +1790,13 @@ button[disabled] {
   }
   .download-card .btn {
     width: 100%;
+  }
+  .footer-bottom {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .footer-credit {
+    margin-left: 0;
   }
   .fixture-row { grid-template-columns: 1fr; }
   .fixture-row strong { line-height: 0.7; }
