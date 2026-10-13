@@ -169,6 +169,11 @@
       }).format(date);
     };
 
+    const dateTime = (value) => {
+      const date = new Date(`${value}T00:00:00`);
+      return Number.isNaN(date.getTime()) ? null : date.getTime();
+    };
+
     const uncachedUrl = (url) => {
       const nextUrl = new URL(url, window.location.href);
       nextUrl.searchParams.set("v", String(Date.now()));
@@ -209,6 +214,46 @@
     const scoreClass = (value) => parseScore(value)
       ? "table-score"
       : "table-score table-score--status";
+
+    const isDugopoljeMatch = (match) => (
+      normalizeClub(match?.home).includes("dugopolje")
+      || normalizeClub(match?.away).includes("dugopolje")
+    );
+
+    const isPlayableFixture = (match) => {
+      const score = String(match?.score ?? "").trim();
+      return !parseScore(score) && !/odgo/i.test(score);
+    };
+
+    const pickNextMatch = (items) => {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const fixtures = items
+        .filter((item) => isDugopoljeMatch(item) && isPlayableFixture(item) && dateTime(item.date) !== null)
+        .sort((a, b) => dateTime(a.date) - dateTime(b.date));
+      return fixtures.find((item) => dateTime(item.date) >= today.getTime()) || fixtures[fixtures.length - 1] || null;
+    };
+
+    const renderNextMatch = (items) => {
+      const section = document.querySelector("[data-next-match-section]");
+      if (!section || !Array.isArray(items) || !items.length) return;
+      const match = pickNextMatch(items);
+      if (!match) return;
+
+      section.hidden = false;
+      section.querySelector("[data-next-match-category]").textContent = match.categoryLabel || "KK Dugopolje";
+      const time = section.querySelector("[data-next-match-date]");
+      if (time) {
+        time.dateTime = match.date || "";
+        time.textContent = formatDate(match.date);
+      }
+      section.querySelector("[data-next-match-home]").innerHTML = `<span class="team-mark">${normalizeClub(match.home).includes("dugopolje") ? `<img src="assets/images/grb.svg" alt="">` : "DOM"}</span><strong>${escapeHtml(match.home || "-")}</strong>`;
+      section.querySelector("[data-next-match-away]").innerHTML = `<span class="team-mark">${normalizeClub(match.away).includes("dugopolje") ? `<img src="assets/images/grb.svg" alt="">` : "GOS"}</span><strong>${escapeHtml(match.away || "-")}</strong>`;
+      section.querySelector("[data-next-match-round]").textContent = [match.round, match.categoryLabel]
+        .filter(Boolean)
+        .join(" / ");
+      section.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
+    };
 
     const standingsStats = (teams, matches) => {
       const rows = teams.map((team, index) => ({
@@ -422,6 +467,8 @@
     }).catch(() => {});
 
     fetchJson("data/downloads.json").then(renderDownloads).catch(() => {});
+
+    fetchJson("data/results.json").then(renderNextMatch).catch(() => {});
 
     fetchJson("data/gallery.json").then((items) => {
       const list = document.querySelector("[data-gallery-list]");

@@ -45,7 +45,31 @@
             <a class="btn btn--outline" href="o-klubu.html">Upoznaj klub</a>
           </div>
         </div>
-        <a class="scroll-cue" href="#news-title" aria-label="Skrolaj na novosti"><span></span></a>
+        <a class="scroll-cue" href="#next-match-title" aria-label="Skrolaj na sljedeću utakmicu"><span></span></a>
+      </section>
+
+      <section class="next-match-section" aria-labelledby="next-match-title" data-next-match-section hidden>
+        <div class="container next-match-wrap">
+          <div class="next-match-heading reveal">
+            <p class="eyebrow">Raspored</p>
+            <h2 id="next-match-title">Sljedeća utakmica</h2>
+          </div>
+          <article class="next-match-card reveal" data-next-match-card>
+            <div class="next-match-card__meta">
+              <span class="tag" data-next-match-category>KK Dugopolje</span>
+              <time data-next-match-date></time>
+            </div>
+            <div class="next-match-card__body">
+              <div class="next-team" data-next-match-home></div>
+              <span class="next-match-card__versus">VS</span>
+              <div class="next-team next-team--away" data-next-match-away></div>
+            </div>
+            <div class="next-match-card__footer">
+              <p data-next-match-round></p>
+              <a class="btn btn--primary" href="rezultati.html">Svi rezultati</a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="section news-section" aria-labelledby="news-title">
@@ -297,7 +321,7 @@
         <div><h2>Podaci kluba</h2><p>KK Dugopolje</p><p>Dugopolje</p><p><a href="mailto:kkdugopolje2011@gmail.com">kkdugopolje2011@gmail.com</a></p><p><a href="tel:+385994055675">099 405 5675</a></p></div>
         <div><h2>Društvene mreže</h2><p><a href="https://www.instagram.com/kkdugopolje/" target="_blank" rel="noreferrer">Instagram @kkdugopolje</a></p><p><a href="https://www.facebook.com/search/top?q=KK%20Dugopolje" target="_blank" rel="noreferrer">Facebook KK Dugopolje</a></p></div>
       </div>
-      <div class="container footer-bottom"><p>&copy; 2026 KK Dugopolje. Sva prava pridržana.</p></div>
+      <div class="container footer-bottom"><p>&copy; 2026 KK Dugopolje. Sva prava pridržana.</p><p class="footer-credit">Stranicu izradio <a href="https://webionar.hr" target="_blank" rel="noreferrer">Webionar</a></p></div>
     </footer>
   </body>
 </html>
