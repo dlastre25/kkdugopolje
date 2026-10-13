@@ -225,33 +225,57 @@
       return !parseScore(score) && !/odgo/i.test(score);
     };
 
-    const pickNextMatch = (items) => {
+    const weekendRange = (time) => {
+      const date = new Date(time);
+      const day = date.getDay();
+      const start = new Date(date);
+      if (day === 0) start.setDate(date.getDate() - 1);
+      if (day > 0 && day < 6) start.setDate(date.getDate() + (6 - day));
+      start.setHours(0, 0, 0, 0);
+
+      const end = new Date(start);
+      end.setDate(start.getDate() + 1);
+      end.setHours(23, 59, 59, 999);
+      return { start: start.getTime(), end: end.getTime() };
+    };
+
+    const pickWeekendMatches = (items) => {
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       const fixtures = items
         .filter((item) => isDugopoljeMatch(item) && isPlayableFixture(item) && dateTime(item.date) !== null)
         .sort((a, b) => dateTime(a.date) - dateTime(b.date));
-      return fixtures.find((item) => dateTime(item.date) >= today.getTime()) || fixtures[fixtures.length - 1] || null;
+      const nextFixture = fixtures.find((item) => dateTime(item.date) >= today.getTime()) || fixtures[fixtures.length - 1] || null;
+      if (!nextFixture) return [];
+      const range = weekendRange(dateTime(nextFixture.date));
+      return fixtures.filter((item) => {
+        const time = dateTime(item.date);
+        return time >= range.start && time <= range.end;
+      });
     };
 
     const renderNextMatch = (items) => {
       const section = document.querySelector("[data-next-match-section]");
       if (!section || !Array.isArray(items) || !items.length) return;
-      const match = pickNextMatch(items);
-      if (!match) return;
+      const matches = pickWeekendMatches(items);
+      const list = section.querySelector("[data-weekend-matches-list]");
+      if (!matches.length || !list) return;
 
       section.hidden = false;
-      section.querySelector("[data-next-match-category]").textContent = match.categoryLabel || "KK Dugopolje";
-      const time = section.querySelector("[data-next-match-date]");
-      if (time) {
-        time.dateTime = match.date || "";
-        time.textContent = formatDate(match.date);
-      }
-      section.querySelector("[data-next-match-home]").innerHTML = `<span class="team-mark">${normalizeClub(match.home).includes("dugopolje") ? `<img src="assets/images/grb.svg" alt="">` : "DOM"}</span><strong>${escapeHtml(match.home || "-")}</strong>`;
-      section.querySelector("[data-next-match-away]").innerHTML = `<span class="team-mark">${normalizeClub(match.away).includes("dugopolje") ? `<img src="assets/images/grb.svg" alt="">` : "GOS"}</span><strong>${escapeHtml(match.away || "-")}</strong>`;
-      section.querySelector("[data-next-match-round]").textContent = [match.round, match.categoryLabel]
-        .filter(Boolean)
-        .join(" / ");
+      list.innerHTML = matches.map((match) => `
+        <article class="weekend-match-card">
+          <div class="weekend-match-card__meta">
+            <span class="tag">${escapeHtml(match.categoryLabel || "KK Dugopolje")}</span>
+            <time datetime="${escapeHtml(match.date || "")}">${formatDate(match.date)}</time>
+          </div>
+          <div class="weekend-match-card__teams">
+            <strong>${escapeHtml(match.home || "-")}</strong>
+            <span>VS</span>
+            <strong>${escapeHtml(match.away || "-")}</strong>
+          </div>
+          <p>${escapeHtml(match.round || "")}</p>
+        </article>
+      `).join("");
       section.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
     };
 
