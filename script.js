@@ -12,6 +12,14 @@
     }
   }
 
+  function matchesMatchFilter(category, filter) {
+    if (filter === "sve") return category !== "turnir-sv-mihovila";
+    if (filter === "djevojcice-u13-sve") {
+      return category === "djevojcice-u13" || category === "djevojcice-u13-grupa-a";
+    }
+    return category === filter;
+  }
+
   function updateMatchRoundSeparators() {
     const rows = [...document.querySelectorAll("[data-match-row]")];
     rows.forEach((row) => row.classList.remove("match-round-end"));
@@ -351,9 +359,7 @@
       const sections = document.querySelectorAll("[data-filter-section]");
       const tournamentOnly = filter === "turnir-sv-mihovila";
       cards.forEach((card) => {
-        card.hidden = filter === "sve"
-          ? card.dataset.category === "turnir-sv-mihovila"
-          : card.dataset.category !== filter;
+        card.hidden = !matchesMatchFilter(card.dataset.category, filter);
       });
       sections.forEach((section) => {
         section.hidden = section.dataset.filterSection !== filter;
@@ -468,7 +474,7 @@
       list.innerHTML = items.map((item, index) => `
         <tr class="${isRoundEnd(items, index) ? "match-round-end" : ""}" data-match-row data-round="${escapeHtml(item.round)}" data-category="${escapeHtml(item.category)}">
           <td><time datetime="${escapeHtml(item.date)}">${formatDate(item.date)}</time></td>
-          <td><span class="match-label">${escapeHtml(item.categoryLabel)}</span></td>
+          <td><span class="match-label">${escapeHtml(item.category === "djevojcice-u13-grupa-a" ? "Djevojčice U13 Grupa A" : item.category === "djevojcice-u13" ? "Djevojčice U13 Grupa B" : item.categoryLabel)}</span></td>
           <td>${escapeHtml(item.round)}</td>
           <th scope="row">${clubCell(item.home)}</th>
           <td>${clubCell(item.away)}</td>
@@ -571,9 +577,7 @@
         const cards = document.querySelectorAll(".result-card[data-category], [data-match-row][data-category], .download-card[data-category], .standings-table-wrap[data-category]");
         buttons.forEach((item) => item.classList.toggle("active", item === button));
         cards.forEach((card) => {
-          card.hidden = filter === "sve"
-            ? card.dataset.category === "turnir-sv-mihovila"
-            : card.dataset.category !== filter;
+          card.hidden = !matchesMatchFilter(card.dataset.category, filter);
         });
         sections.forEach((section) => {
           section.hidden = section.dataset.filterSection !== filter;
