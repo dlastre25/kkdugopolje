@@ -100,8 +100,10 @@ content:
               values:
                 - name: kadetkinje
                   label: Kadetkinje U16
+                - name: djevojcice-u13-grupa-a
+                  label: Djevojčice U13 Grupa A
                 - name: djevojcice-u13
-                  label: Djevojčice U13
+                  label: Djevojčice U13 Grupa B
                 - name: djevojcice-u14
                   label: Djevojčice U14
                 - name: turnir-sv-mihovila
@@ -110,7 +112,7 @@ content:
             label: Naziv kategorije
             type: string
             required: true
-            description: "Tekst koji se prikazuje u tablici, npr. Kadetkinje U16."
+            description: "Tekst koji se prikazuje u tablici, npr. Kadetkinje U16, Djevojčice U13 Grupa A ili Djevojčice U13 Grupa B. Grupu odaberite u polju Filter kategorija."
           - name: round
             label: Kolo
             type: string
@@ -149,8 +151,10 @@ content:
             required: true
             options:
               values:
+                - name: djevojcice-u13-grupa-a
+                  label: Djevojčice U13 Grupa A
                 - name: djevojcice-u13
-                  label: Djevojčice U13
+                  label: Djevojčice U13 Grupa B
                 - name: djevojcice-u14
                   label: Djevojčice U14
                 - name: kadetkinje
@@ -182,8 +186,10 @@ content:
             required: true
             options:
               values:
+                - name: djevojcice-u13-grupa-a
+                  label: Djevojčice U13 Grupa A
                 - name: djevojcice-u13
-                  label: Djevojčice U13
+                  label: Djevojčice U13 Grupa B
                 - name: djevojcice-u14
                   label: Djevojčice U14
                 - name: kadetkinje
