@@ -636,6 +636,10 @@ p { margin: 0; }
   min-width: 180px;
   color: var(--color-primary-dark);
 }
+.match-table tbody tr[data-match-row] > :nth-child(1),
+.match-table tbody tr[data-match-row] > :nth-child(3) {
+  white-space: nowrap;
+}
 .match-table th:nth-child(6),
 .match-table td:nth-child(6) {
   text-align: center;
