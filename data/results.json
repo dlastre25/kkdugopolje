@@ -240,6 +240,36 @@
     "scorers": " "
   },
   {
+    "date": "2026-10-17",
+    "category": "djevojcice-u13-grupa-a",
+    "categoryLabel": "Djevojčice U13 Grupa A",
+    "round": "1. kolo",
+    "home": "ŽKK Šibenik",
+    "away": "ŽKK Vodice",
+    "score": " Odgođeno",
+    "scorers": " "
+  },
+  {
+    "date": "2026-10-18",
+    "category": "djevojcice-u13-grupa-a",
+    "categoryLabel": "Djevojčice U13 Grupa A",
+    "round": "1. kolo",
+    "home": "ŽKK Zadar",
+    "away": " KK Došk",
+    "score": " ",
+    "scorers": " "
+  },
+  {
+    "date": "2026-10-17",
+    "category": "djevojcice-u13-grupa-a",
+    "categoryLabel": "Djevojčice U13 Grupa A",
+    "round": "1. kolo",
+    "home": "ŽKK Zadar Plus",
+    "away": "KA Anđa Jelavić",
+    "score": " ",
+    "scorers": " "
+  },
+  {
     "date": "2026-10-31",
     "category": "djevojcice-u13",
     "categoryLabel": "Djevojčice U13 GRUPA B",
@@ -296,36 +326,6 @@
     "round": "5. kolo",
     "home": "KAŽL",
     "away": "ŽKK Albatros",
-    "score": " ",
-    "scorers": " "
-  },
-  {
-    "date": "2026-10-17",
-    "category": "djevojcice-u13-grupa-a",
-    "categoryLabel": "Djevojčice U13 Grupa A",
-    "round": "1. kolo",
-    "home": "ŽKK Šibenik",
-    "away": "ŽKK Vodice",
-    "score": " Odgođeno",
-    "scorers": " "
-  },
-  {
-    "date": "2026-10-18",
-    "category": "djevojcice-u13-grupa-a",
-    "categoryLabel": "Djevojčice U13 Grupa A",
-    "round": "1. kolo",
-    "home": "ŽKK Zadar",
-    "away": " KK Došk",
-    "score": " ",
-    "scorers": " "
-  },
-  {
-    "date": "2026-10-17",
-    "category": "djevojcice-u13-grupa-a",
-    "categoryLabel": "Djevojčice U13 Grupa A",
-    "round": "1. kolo",
-    "home": "ŽKK Zadar Plus",
-    "away": "KA Anđa Jelavić",
     "score": " ",
     "scorers": " "
   }
