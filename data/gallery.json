@@ -83,5 +83,10 @@
     "image": "assets/images/turnir-sibenik.jpg",
     "alt": "Sezona 2026 / 2027 Kadetkinje U16",
     "layout": "wide"
+  },
+  {
+    "image": "assets/images/u13-kk-dg.jpg",
+    "alt": "U13 djevojčice sezona 2026/2027",
+    "layout": "standard"
   }
 ]
