@@ -644,6 +644,13 @@ p { margin: 0; }
 .match-table td:nth-child(6) {
   text-align: center;
 }
+.container:has([data-match-filter="mladji-kadeti"].active) .match-table :is(th, td):is(:nth-child(2), :nth-child(3)) {
+  width: 1%;
+  white-space: nowrap;
+}
+.container:has([data-match-filter="mladji-kadeti"].active) .match-table :is(th, td):nth-child(7) {
+  min-width: 260px;
+}
 .club-cell {
   display: inline-flex;
   align-items: center;
