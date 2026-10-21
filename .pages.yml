@@ -108,11 +108,13 @@ content:
                   label: Djevojčice U14
                 - name: turnir-sv-mihovila
                   label: Turnir Sv. Mihovila
+                - name: mladji-kadeti
+                  label: MLAĐI KADETI
           - name: categoryLabel
             label: Naziv kategorije
             type: string
             required: true
-            description: "Tekst koji se prikazuje u tablici, npr. Kadetkinje U16, Djevojčice U13 Grupa A ili Djevojčice U13 Grupa B. Grupu odaberite u polju Filter kategorija."
+            description: "Tekst koji se prikazuje u tablici, npr. Kadetkinje U16, Djevojčice U13 Grupa A, Djevojčice U13 Grupa B ili MLAĐI KADETI. Grupu odaberite u polju Filter kategorija."
           - name: round
             label: Kolo
             type: string
@@ -129,7 +131,7 @@ content:
             label: Rezultat
             type: string
             required: true
-            description: "Primjer: 52 - 48 ili - ako rezultat još nije upisan."
+            description: "Primjer: 52 - 48 ili - ako rezultat još nije upisan. Tablica automatski zbraja odigrane utakmice: pobjeda 2 boda, poraz 1 bod. Neriješen rezultat (uključujući 0 - 0) ne ulazi u tablicu."
           - name: scorers
             label: Strijelci
             type: text
@@ -159,11 +161,13 @@ content:
                   label: Djevojčice U14
                 - name: kadetkinje
                   label: Kadetkinje U16
+                - name: mladji-kadeti
+                  label: MLAĐI KADETI
           - name: categoryLabel
             label: Naziv lige
             type: string
             required: true
-            description: "Primjer: Djevojčice U14 ili Kadetkinje U16."
+            description: "Primjer: Djevojčice U14, Kadetkinje U16 ili MLAĐI KADETI."
           - name: club
             label: Klub
             type: string
@@ -194,11 +198,13 @@ content:
                   label: Djevojčice U14
                 - name: kadetkinje
                   label: Kadetkinje U16
+                - name: mladji-kadeti
+                  label: MLAĐI KADETI
           - name: title
             label: Naslov kartice
             type: string
             required: true
-            description: "Primjer: U13, U14 ili U16."
+            description: "Primjer: U13, U14, U16 ili MLAĐI KADETI."
           - name: description
             label: Opis
             type: string

@@ -358,5 +358,425 @@
     "away": "ŽKK Zadar Plus",
     "score": " 42 - 14",
     "scorers": " Živković 13, Grgas Bile 13"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "1. kolo",
+    "home": "Cetina",
+    "away": "Ploče",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "1. kolo",
+    "home": "K.A.Split",
+    "away": "KK Dugopolje",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "1. kolo",
+    "home": "Omiš Č.T",
+    "away": "Imotski",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-31",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "2. kolo",
+    "home": "KK Dugopolje",
+    "away": "Omiš Č.T",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-31",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "2. kolo",
+    "home": "Ploče",
+    "away": "K.A.Split",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-10-31",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "2. kolo",
+    "home": "Amfora",
+    "away": "Cetina",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-11-07",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "3. kolo",
+    "home": "K.A.Split",
+    "away": "Amfora",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-11-07",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "3. kolo",
+    "home": "Omiš Č.T",
+    "away": "Ploče",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-11-07",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "3. kolo",
+    "home": "Imotski",
+    "away": "KK Dugopolje",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-11-21",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "4. kolo",
+    "home": "Ploče",
+    "away": "Imotski",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-11-21",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "4. kolo",
+    "home": "Amfora",
+    "away": "Omiš Č.T",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-11-21",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "4. kolo",
+    "home": "Cetina",
+    "away": "K.A.Split",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-11-28",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "5. kolo",
+    "home": "Omiš Č.T",
+    "away": "Cetina",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-11-28",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "5. kolo",
+    "home": "Imotski",
+    "away": "Amfora",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-11-28",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "5. kolo",
+    "home": "KK Dugopolje",
+    "away": "Ploče",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-12-05",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "6. kolo",
+    "home": "Amfora",
+    "away": "KK Dugopolje",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-12-05",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "6. kolo",
+    "home": "Cetina",
+    "away": "Imotski",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-12-05",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "6. kolo",
+    "home": "K.A.Split",
+    "away": "Omiš Č.T",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-12-12",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "7. kolo",
+    "home": "Imotski",
+    "away": "K.A.Split",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-12-12",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "7. kolo",
+    "home": "KK Dugopolje",
+    "away": "Cetina",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2026-12-12",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "7. kolo",
+    "home": "Ploče",
+    "away": "Amfora",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-01-16",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "8. kolo",
+    "home": "Ploče",
+    "away": "Cetina",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-01-16",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "8. kolo",
+    "home": "KK Dugopolje",
+    "away": "K.A.Split",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-01-16",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "8. kolo",
+    "home": "Imotski",
+    "away": "Omiš Č.T",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-01-23",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "9. kolo",
+    "home": "Omiš Č.T",
+    "away": "KK Dugopolje",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-01-23",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "9. kolo",
+    "home": "K.A.Split",
+    "away": "Ploče",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-01-23",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "9. kolo",
+    "home": "Cetina",
+    "away": "Amfora",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-02-06",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "10. kolo",
+    "home": "Amfora",
+    "away": "K.A.Split",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-02-06",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "10. kolo",
+    "home": "Ploče",
+    "away": "Omiš Č.T",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-02-06",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "10. kolo",
+    "home": "KK Dugopolje",
+    "away": "Imotski",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-02-13",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "11. kolo",
+    "home": "Imotski",
+    "away": "Ploče",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-02-13",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "11. kolo",
+    "home": "Omiš Č.T",
+    "away": "Amfora",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-02-13",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "11. kolo",
+    "home": "K.A.Split",
+    "away": "Cetina",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-02-20",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "12. kolo",
+    "home": "Cetina",
+    "away": "Omiš Č.T",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-02-20",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "12. kolo",
+    "home": "Amfora",
+    "away": "Imotski",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-02-20",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "12. kolo",
+    "home": "Ploče",
+    "away": "KK Dugopolje",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-03-06",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "13. kolo",
+    "home": "KK Dugopolje",
+    "away": "Amfora",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-03-06",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "13. kolo",
+    "home": "Imotski",
+    "away": "Cetina",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-03-06",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "13. kolo",
+    "home": "Omiš Č.T",
+    "away": "K.A.Split",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-03-13",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "14. kolo",
+    "home": "K.A.Split",
+    "away": "Imotski",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-03-13",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "14. kolo",
+    "home": "Cetina",
+    "away": "KK Dugopolje",
+    "score": "-",
+    "scorers": "-"
+  },
+  {
+    "date": "2027-03-13",
+    "category": "mladji-kadeti",
+    "categoryLabel": "MLAĐI KADETI",
+    "round": "14. kolo",
+    "home": "Amfora",
+    "away": "Ploče",
+    "score": "-",
+    "scorers": "-"
   }
 ]

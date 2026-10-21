@@ -304,11 +304,10 @@
         if (!home || !away) return;
 
         const score = parseScore(match.score);
-        if (!score) return;
+        if (!score || score.home === score.away) return;
 
         home.played += 1;
         away.played += 1;
-        if (score.home === score.away) return;
 
         if (score.home > score.away) {
           home.wins += 1;
