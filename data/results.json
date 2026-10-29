@@ -784,8 +784,18 @@
     "category": "djevojcice-u13-grupa-a",
     "categoryLabel": "Djevojčice U13 Grupa A",
     "round": "3. kolo",
-    "home": "KK Došk",
-    "away": "ŽKK Škabrnja",
+    "home": "ŽKK Škabrnja",
+    "away": "KA Anđa Jelavić",
+    "score": " Odgođeno",
+    "scorers": " "
+  },
+  {
+    "date": "2026-10-31",
+    "category": "djevojcice-u13-grupa-a",
+    "categoryLabel": "Djevojčice U13 Grupa A",
+    "round": "3. kolo",
+    "home": "ŽKK Zadar",
+    "away": "ŽKK Šibenik",
     "score": " ",
     "scorers": " "
   },
@@ -794,18 +804,8 @@
     "category": "djevojcice-u13-grupa-a",
     "categoryLabel": "Djevojčice U13 Grupa A",
     "round": "3. kolo",
-    "home": "KA Anđa Jelavić",
-    "away": "ŽKK Zadar",
-    "score": " ",
-    "scorers": " "
-  },
-  {
-    "date": "2026-10-31",
-    "category": "djevojcice-u13-grupa-a",
-    "categoryLabel": "Djevojčice U13 Grupa A",
-    "round": "3. kolo",
-    "home": "ŽKK Šibenik",
-    "away": "ŽKK Zadar Plus",
+    "home": "ŽKK Zadar Plus",
+    "away": "ŽKK Vodice",
     "score": " ",
     "scorers": " "
   }
