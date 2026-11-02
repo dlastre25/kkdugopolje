@@ -808,5 +808,35 @@
     "away": "ŽKK Vodice",
     "score": " ",
     "scorers": " "
+  },
+  {
+    "date": "2026-11-07",
+    "category": "kadetkinje",
+    "categoryLabel": "Kadetkinje U16",
+    "round": "6. kolo",
+    "home": "KA Anđa Jelavić",
+    "away": "ŽKK Albatros",
+    "score": "-",
+    "scorers": " "
+  },
+  {
+    "date": "2026-11-07",
+    "category": "kadetkinje",
+    "categoryLabel": "Kadetkinje U16",
+    "round": "6. kolo",
+    "home": "KAŽL",
+    "away": "ŽKK Ragusa",
+    "score": "-",
+    "scorers": " "
+  },
+  {
+    "date": "2026-11-07",
+    "category": "kadetkinje",
+    "categoryLabel": "Kadetkinje U16",
+    "round": "6. kolo",
+    "home": "KK Dugopolje",
+    "away": "ŽKK Šibenik",
+    "score": "-",
+    "scorers": " "
   }
 ]
