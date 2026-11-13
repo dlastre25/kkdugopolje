@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=kadeti-columns-20261021">
-    <script src="script.js?v=mladji-kadeti-20261021" defer></script>
+    <script src="script.js?v=u10-20261113" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Preskoči na sadržaj</a>
@@ -38,6 +38,7 @@
         <div class="container">
           <div class="toolbar reveal" aria-label="Filter kategorija">
             <button class="filter-button active" type="button" data-match-filter="sve">Sve</button>
+            <button class="filter-button" type="button" data-match-filter="u10">U10 liga</button>
             <button class="filter-button" type="button" data-match-filter="djevojcice-u13-sve">Djevojčice U13</button>
             <button class="filter-button" type="button" data-match-filter="djevojcice-u14">Djevojčice U14</button>
             <button class="filter-button" type="button" data-match-filter="kadetkinje">Kadetkinje U16</button>
@@ -105,6 +106,21 @@
           </div>
 
           <div class="league-table-grid" data-league-section>
+            <div class="standings-table-wrap reveal" data-category="u10">
+              <table class="standings-table">
+                <caption>U10 liga - Mini liga dječaka 2017. godište i mlađi</caption>
+                <thead>
+                  <tr><th scope="col">Klub</th><th scope="col">OU</th><th scope="col">P</th><th scope="col">I</th><th scope="col">Bod</th></tr>
+                </thead>
+                <tbody data-standings-list>
+                  <tr><th scope="row">Trogir</th><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                  <tr><th scope="row">Brač</th><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                  <tr><th scope="row">KK Dugopolje</th><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                  <tr><th scope="row">Cetina</th><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                  <tr><th scope="row">Solin</th><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                </tbody>
+              </table>
+            </div>
             <div class="standings-table-wrap reveal" data-category="mladji-kadeti">
               <table class="standings-table">
                 <caption>MLAĐI KADETI - SDŽ Grupa A</caption>
@@ -197,6 +213,14 @@
           </div>
 
           <div class="download-grid" data-download-list data-download-section>
+            <article class="download-card reveal" data-category="u10">
+              <div>
+                <span class="tag">PDF raspored</span>
+                <h3>U10 liga</h3>
+                <p>Mini liga dječaka 2017. godište i mlađi, sezona 2026/27</p>
+              </div>
+              <a class="btn btn--dark" href="assets/U10%20LIGA.pdf" download>Preuzmi PDF</a>
+            </article>
             <article class="download-card reveal" data-category="mladji-kadeti">
               <div>
                 <span class="tag">PDF raspored</span>

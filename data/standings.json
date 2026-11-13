@@ -168,5 +168,30 @@
     "category": "mladji-kadeti",
     "categoryLabel": "MLAĐI KADETI",
     "club": "KK Dugopolje"
+  },
+  {
+    "category": "u10",
+    "categoryLabel": "U10 liga",
+    "club": "Trogir"
+  },
+  {
+    "category": "u10",
+    "categoryLabel": "U10 liga",
+    "club": "Brač"
+  },
+  {
+    "category": "u10",
+    "categoryLabel": "U10 liga",
+    "club": "KK Dugopolje"
+  },
+  {
+    "category": "u10",
+    "categoryLabel": "U10 liga",
+    "club": "Cetina"
+  },
+  {
+    "category": "u10",
+    "categoryLabel": "U10 liga",
+    "club": "Solin"
   }
 ]

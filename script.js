@@ -331,13 +331,12 @@
     };
 
     const renderStandings = (teams, matches) => {
-      if (!Array.isArray(teams) || !teams.length) return;
+      if (!Array.isArray(teams)) return;
       const rows = standingsStats(teams, Array.isArray(matches) ? matches : []);
       document.querySelectorAll(".standings-table-wrap[data-category]").forEach((wrap) => {
         const body = wrap.querySelector("[data-standings-list]");
         if (!body) return;
         const categoryRows = rows.filter((row) => row.category === wrap.dataset.category);
-        if (!categoryRows.length) return;
         body.innerHTML = categoryRows.map((row) => `
           <tr>
             <th scope="row">${escapeHtml(row.club)}</th>
@@ -373,7 +372,7 @@
 
     const renderDownloads = (items) => {
       const list = document.querySelector("[data-download-list]");
-      if (!list || !Array.isArray(items) || !items.length) return;
+      if (!list || !Array.isArray(items)) return;
       list.innerHTML = items.map((item) => {
         const file = normalizePath(item.file);
         return `
@@ -468,17 +467,17 @@
 
     fetchJson("data/results.json").then((items) => {
       const list = document.querySelector("[data-match-list]");
-      if (!list || !Array.isArray(items) || !items.length) return;
+      if (!list || !Array.isArray(items)) return;
       matchResults = items;
       list.innerHTML = items.map((item, index) => `
         <tr class="${isRoundEnd(items, index) ? "match-round-end" : ""}" data-match-row data-round="${escapeHtml(item.round)}" data-category="${escapeHtml(item.category)}">
-          <td><time datetime="${escapeHtml(item.date)}">${formatDate(item.date)}</time></td>
+          <td>${item.date ? `<time datetime="${escapeHtml(item.date)}">${formatDate(item.date)}</time>` : escapeHtml(item.dateNote || "Termin naknadno")}</td>
           <td><span class="match-label">${escapeHtml(item.category === "djevojcice-u13-grupa-a" ? "Djevojčice U13 Grupa A" : item.category === "djevojcice-u13" ? "Djevojčice U13 Grupa B" : item.categoryLabel)}</span></td>
           <td>${escapeHtml(item.round)}</td>
           <th scope="row">${clubCell(item.home)}</th>
           <td>${clubCell(item.away)}</td>
           <td><strong class="${scoreClass(item.score)}">${escapeHtml(item.score)}</strong></td>
-          <td>${escapeHtml(item.scorers)}</td>
+          <td>${escapeHtml(item.scorers || "-")}</td>
         </tr>
       `).join("") + `
         <tr class="match-empty-row" data-empty-match hidden>

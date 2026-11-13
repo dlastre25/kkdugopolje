@@ -91,13 +91,19 @@ content:
           - name: date
             label: Datum utakmice
             type: date
-            required: true
+            description: "Upišite kad je poznat točan datum. Ako nije poznat, ostavite prazno i unesite okvirni termin."
+          - name: dateNote
+            label: Okvirni termin
+            type: string
+            description: "Primjer: Studeni 2026. Prikazuje se samo dok datum utakmice nije upisan."
           - name: category
             label: Filter kategorija
             type: select
             required: true
             options:
               values:
+                - name: u10
+                  label: U10 liga
                 - name: kadetkinje
                   label: Kadetkinje U16
                 - name: djevojcice-u13-grupa-a
@@ -114,7 +120,7 @@ content:
             label: Naziv kategorije
             type: string
             required: true
-            description: "Tekst koji se prikazuje u tablici, npr. Kadetkinje U16, Djevojčice U13 Grupa A, Djevojčice U13 Grupa B ili MLAĐI KADETI. Grupu odaberite u polju Filter kategorija."
+            description: "Tekst koji se prikazuje u tablici, npr. U10 liga, Kadetkinje U16, Djevojčice U13 Grupa A, Djevojčice U13 Grupa B ili MLAĐI KADETI. Grupu odaberite u polju Filter kategorija."
           - name: round
             label: Kolo
             type: string
@@ -135,7 +141,7 @@ content:
           - name: scorers
             label: Strijelci
             type: text
-            required: true
+            description: "Neobavezno. Ostavite prazno ako strijelci još nisu poznati."
 
       - name: standings
         label: Tablice liga
@@ -153,6 +159,8 @@ content:
             required: true
             options:
               values:
+                - name: u10
+                  label: U10 liga
                 - name: djevojcice-u13-grupa-a
                   label: Djevojčice U13 Grupa A
                 - name: djevojcice-u13
@@ -190,6 +198,8 @@ content:
             required: true
             options:
               values:
+                - name: u10
+                  label: U10 liga
                 - name: djevojcice-u13-grupa-a
                   label: Djevojčice U13 Grupa A
                 - name: djevojcice-u13

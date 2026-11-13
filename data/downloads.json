@@ -28,5 +28,11 @@
     "title": "MLAĐI KADETI",
     "description": "SDŽ - Grupa A, sezona 2026/27",
     "file": "assets/RASPORED MLAĐIH KADETA SDŽ GRUPA-A.pdf"
+  },
+  {
+    "category": "u10",
+    "title": "U10 liga",
+    "description": "Mini liga dječaka 2017. godište i mlađi, sezona 2026/27",
+    "file": "assets/U10 LIGA.pdf"
   }
 ]
